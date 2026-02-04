@@ -1,0 +1,368 @@
+<!-- D2C Generated XML - Figma URL: https://www.figma.com/design/zNQUjHBcxxtV8Tp2ve0oWq/%E8%B4%A7%E7%9B%98%E5%A4%8D%E7%9B%98-%E8%AE%BE%E8%AE%A1%E7%A8%BF?node-id=110-26142&t=GPfBiVcf7WGQDHtE-4 -->
+<!-- Generated at: 2026-02-04T03:59:48.312Z -->
+<!-- 🗑️ This is a temporary file, please delete after code generation -->
+
+<MainUI pv="v260203.web.en" xml-id="2fdb9efc002f280b">
+    <Screen id="110:26142" codegen-summary="Review Report List dashboard with filters and data table" background-color="#F3F4F5" display="flex" flex-direction="column">
+        <!-- Top Navigation Bar -->
+        <TabBar id="110:26143" display="flex" flex-direction="column" impl-role="nav">
+            <Container id="110:26144" display="flex" flex-direction="row" align-items="center" padding="0px 0px 0px 28px" background-color="rgba(255, 255, 255, 0.5)" backdrop-filter="blur(36px)" border-radius="8px 0px 0px 0px">
+                <!-- Active Tab -->
+                <TabItem id="110:26145" display="flex" flex-direction="column" width="130px" height="36px" selected="true">
+                    <Container id="110:26146" height="6px" display="flex" flex-direction="column">
+                        <Image id="110:26147" width="130px" height="36px" position="absolute" top="0px" right="0px" left="0px" box-shadow="0px 1.2px 3.6px 0px rgba(0, 0, 0, 0.11)"  src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/cf2ee07e-3c94-4624-b81b-351924493d02"/>
+                    </Container>
+                    <Container id="110:26148" display="flex" flex-direction="row" align-items="center" gap="8px" padding="2px 16px 8px 18px" border-radius="0px 0px 4px 4px">
+                        <Text id="110:26149" font-family="PingFang SC" font-size="12px" font-weight="400" line-height="20px" color="#12141A" white-space="nowrap">复盘报告列表</Text>
+                        <IconButton id="110:26150" width="16px" height="16px">
+                            <Icon id="I110:26150;4499:402" name="window-close" width="16px" height="16px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c82ab401-a47a-467f-aa92-84c07f2d2599" image-format="png"/>
+                        </IconButton>
+                    </Container>
+                </TabItem>
+                <!-- Inactive Tab 1 -->
+                <TabItem id="110:26151" display="flex" flex-direction="row" align-items="center" gap="8px" padding="8px 8px 8px 12px" width="128px">
+                    <Text id="I110:26151;179:9130" font-family="PingFang SC" font-size="12px" font-weight="400" line-height="20px" color="#85878A" white-space="nowrap">创建券活动</Text>
+                    <IconButton id="I110:26151;179:9131" width="16px" height="16px" opacity="0.01">
+                        <Icon id="I110:26151;179:9131;4499:402" name="window-close" width="16px" height="16px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2f25c8fd-9146-420f-b0f6-f3da30800684" image-format="png"/>
+                    </IconButton>
+                </TabItem>
+                <!-- Inactive Tab 2 -->
+                <TabItem id="110:26153" display="flex" flex-direction="row" align-items="center" gap="8px" padding="8px 8px 8px 12px" width="128px">
+                    <Text id="I110:26153;179:9130" font-family="PingFang SC" font-size="12px" font-weight="400" line-height="20px" color="#85878A" white-space="nowrap">直播间报名</Text>
+                    <IconButton id="I110:26153;179:9131" width="16px" height="16px" opacity="0.01">
+                        <Icon id="I110:26153;179:9131;4499:402" name="window-close" width="16px" height="16px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/38af3f52-6343-4f87-8f4a-be469415a8dc" image-format="png"/>
+                    </IconButton>
+                </TabItem>
+                <!-- Inactive Tab 3 -->
+                <TabItem id="110:26154" display="flex" flex-direction="row" align-items="center" gap="8px" padding="8px 8px 8px 12px" width="128px">
+                    <Text id="I110:26154;179:9130" font-family="PingFang SC" font-size="12px" font-weight="400" line-height="20px" color="#85878A" white-space="nowrap">项目管理</Text>
+                    <IconButton id="I110:26154;179:9131" width="16px" height="16px" opacity="0.01">
+                        <Icon id="I110:26154;179:9131;4499:402" name="window-close" width="16px" height="16px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b4866d66-1e57-48c7-b3c2-499168bdb598" image-format="png"/>
+                    </IconButton>
+                </TabItem>
+                <!-- Divider -->
+                <Container id="110:26155" width="1px" height="12px">
+                    <Box id="I110:26155;1:705" width="1px" height="12px" background-color="#DCDEE1" />
+                </Container>
+                <!-- Inactive Tab 4 -->
+                <TabItem id="110:26156" display="flex" flex-direction="row" align-items="center" gap="8px" padding="8px 8px 8px 12px" width="128px">
+                    <Text id="I110:26156;179:9130" font-family="PingFang SC" font-size="12px" font-weight="400" line-height="20px" color="#85878A" white-space="nowrap">领券明细查询</Text>
+                    <IconButton id="I110:26156;179:9131" width="16px" height="16px" opacity="0.01">
+                        <Icon id="I110:26156;179:9131;4499:402" name="window-close" width="16px" height="16px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0cfa9e98-6afa-44ee-9ee6-b6a8e8af7abc" image-format="png"/>
+                    </IconButton>
+                </TabItem>
+                <!-- Divider -->
+                <Container id="110:26157" width="1px" height="12px">
+                    <Box id="I110:26157;1:705" width="1px" height="12px" background-color="#DCDEE1" />
+                </Container>
+                <!-- Inactive Tab 5 -->
+                <TabItem id="110:26158" display="flex" flex-direction="row" align-items="center" gap="8px" padding="8px 8px 8px 12px" width="128px">
+                    <Text id="I110:26158;179:9130" font-family="PingFang SC" font-size="12px" font-weight="400" line-height="20px" color="#85878A" white-space="nowrap">领券明细查询</Text>
+                    <IconButton id="I110:26158;179:9131" width="16px" height="16px" opacity="0.01">
+                        <Icon id="I110:26158;179:9131;4499:402" name="window-close" width="16px" height="16px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/933343e1-76a7-441f-82b0-6d9ba84a8764" image-format="png"/>
+                    </IconButton>
+                </TabItem>
+                <!-- Divider -->
+                <Container id="110:26159" width="1px" height="12px">
+                    <Box id="I110:26159;1:705" width="1px" height="12px" background-color="#DCDEE1" />
+                </Container>
+            </Container>
+            <!-- Bottom Border -->
+            <Box id="110:26160" height="0.5px" background-color="#E1E7F2" />
+        </TabBar>
+
+        <!-- Main Content Area -->
+        <Container id="110:26161" display="flex" flex-direction="column" gap="16px" padding="16px" impl-role="main">
+            
+            <!-- Header Section -->
+            <Header id="110:27917" display="flex" flex-direction="column" gap="16px" padding="24px 24px 0px" background-color="#FFFFFF" border-radius="8px" impl-role="header">
+                <Container id="110:27918" display="flex" flex-direction="row" justify-content="space-between" align-items="center" gap="24px" width="1290px">
+                    <Container id="110:27919" display="flex" flex-direction="row" align-items="center" gap="8px">
+                        <Text id="110:27920" font-family="PingFang SC" font-size="24px" font-weight="500" line-height="36px" color="#252931">复盘报告列表</Text>
+                        <Text id="110:28421" font-family="PingFang SC" font-size="12px" font-weight="400" line-height="16px" color="#898B8F">查看业务专项、单一策略的复盘报告，创建新的货盘复盘报告</Text>
+                    </Container>
+                    <!-- Hidden Form (Opacity 0) - Preserved as per rules -->
+                    <Container id="110:27922" display="flex" flex-direction="row" gap="16px" opacity="0">
+                        <Text id="I110:27923;10943:109622">分析视图</Text>
+                        <!-- ... hidden content ... -->
+                    </Container>
+                </Container>
+
+                <!-- Page Tabs -->
+                <TabBar id="110:27929" display="flex" flex-direction="row" gap="10px" width="1290px" height="44px" background-color="#FFFFFF" border-radius="8px">
+                    <!-- Active Tab -->
+                    <TabItem id="I110:27929;37121:79272" display="flex" flex-direction="column" gap="9px" width="160px" height="44px" selected="true">
+                        <Container id="I110:27929;37121:79272;37121:79058" display="flex" flex-direction="row" align-items="center" gap="10px" height="32px">
+                            <Text id="I110:27929;37121:79272;37121:79059" font-family="PingFang SC" font-size="20px" font-weight="500" line-height="32px" color="#252931">业务专项复盘报告</Text>
+                        </Container>
+                        <Container id="I110:27929;37121:79272;37121:79060" display="flex" flex-direction="column" gap="10px" height="3px">
+                            <Box id="I110:27929;37121:79272;37121:79061" width="160px" height="3px" background-color="#1966FF" border-radius="2px" />
+                        </Container>
+                    </TabItem>
+                    <!-- Inactive Tab -->
+                    <TabItem id="I110:27929;37121:79273" display="flex" flex-direction="column" gap="9px" width="120px" height="44px">
+                        <Container id="I110:27929;37121:79273;37121:79008" display="flex" flex-direction="row" align-items="center" gap="10px" height="32px">
+                            <Text id="I110:27929;37121:79273;37121:79009" font-family="PingFang SC" font-size="20px" font-weight="400" line-height="32px" color="#565960">策略复盘报告</Text>
+                        </Container>
+                    </TabItem>
+                    <!-- Inactive Tab -->
+                    <TabItem id="I110:27929;37121:79275" display="flex" flex-direction="column" gap="9px" width="140px" height="44px">
+                        <Container id="I110:27929;37121:79275;37121:79008" display="flex" flex-direction="row" align-items="center" gap="10px" height="32px">
+                            <Text id="I110:27929;37121:79275;37121:79009" font-family="PingFang SC" font-size="20px" font-weight="400" line-height="32px" color="#565960">自定义复盘报告</Text>
+                        </Container>
+                    </TabItem>
+                </TabBar>
+            </Header>
+
+            <!-- Content Body -->
+            <Container id="110:26306" display="flex" flex-direction="column" gap="16px" padding="24px" background-color="#FFFFFF">
+                
+                <!-- Filters Row -->
+                <Container id="183:31424" display="flex" flex-direction="row" align-items="center" gap="16px" height="32px" impl-role="form">
+                    <!-- Date Picker -->
+                    <Container id="183:31426" display="flex" flex-direction="column" gap="4px" flex-grow="1" width="440.5px" height="32px"
+                               impl-web="date-picker" impl-behavior="dateRange">
+                        <Container id="I183:31426;55518:3482" height="32px">
+                            <Container id="I183:31426;55518:3482;32746:60393" position="absolute" top="0px" left="0px" width="441px" height="32px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="4px" />
+                            <!-- Date Icon -->
+                            <Container id="I183:31426;55518:3482;32746:60394" position="absolute" top="50%" right="7.5px" width="16px" height="16px" transform="translateY(-50%)">
+                                <Icon id="I183:31426;55518:3482;32746:60394;171:975" name="calendar" width="13px" height="13px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/610680f3-d5b2-4af9-9528-c501b7213240" image-format="png"/>
+                            </Container>
+                            <!-- Content -->
+                            <Container id="I183:31426;55518:3482;32746:60395" position="absolute" top="0px" left="0px" width="220px" height="32px" display="flex" flex-direction="row" align-items="center" gap="8px" padding="0px 0px 0px 12px">
+                                <Text id="I183:31426;55518:3482;55517:22418;10943:109622" font-family="PingFang SC" font-size="14px" color="#898B8F">分析周期</Text>
+                                <Text id="I183:31426;55518:3482;32746:60396" font-family="PingFang SC" font-size="12px" color="#252931">2025/05/01 00:00:00</Text>
+                                <Box id="I183:31426;55518:3482;32746:60397" width="8px" height="1px" background-color="#BCBDC0" />
+                                <Text id="I183:31426;55518:3482;32746:60398" font-family="PingFang SC" font-size="12px" color="#252931">2025/05/08 00:00:00</Text>
+                            </Container>
+                        </Container>
+                    </Container>
+
+                    <!-- Select: Business Domain -->
+                    <Select id="183:31445" display="flex" flex-direction="column" justify-content="center" gap="4px" width="376px" height="32px"
+                            impl-web="select" impl-behavior="select options(['市集'])">
+                        <Container id="I183:31445;50300:95017" height="32px" border-radius="4px">
+                            <Container id="I183:31445;50300:95017;59149:19021" width="376px" height="32px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="4px" />
+                            <Container id="I183:31445;50300:95017;59149:19022" position="absolute" top="0px" left="0px" height="32px" display="flex" flex-direction="row" align-items="center" gap="12px" padding="6px 12px">
+                                <Text id="I183:31445;50300:95017;59149:19022;50300:85234;10943:109622" font-family="PingFang SC" font-size="14px" color="#898B8F">业务域</Text>
+                                <Text id="I183:31445;50300:95017;59149:19022;11173:113534" font-family="PingFang SC" font-size="14px" color="#252931">市集</Text>
+                            </Container>
+                            <Container id="I183:31445;50300:95017;59149:19023" position="absolute" top="50%" right="8px" width="16px" height="16px" transform="translateY(-50%)">
+                                <Icon id="I183:31445;50300:95017;59149:19023;48:80" name="chevron-down" width="9.33px" height="5.18px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/cb2bab5d-d8dd-49ca-bb98-2581aa71dfb2" image-format="png"/>
+                            </Container>
+                        </Container>
+                    </Select>
+
+                    <!-- Select: Business Special -->
+                    <Select id="183:31446" display="flex" flex-direction="column" justify-content="center" gap="4px" flex-grow="1" width="440.5px" height="32px"
+                            impl-web="select" impl-behavior="select options(['全部业务专项'])">
+                        <Container id="I183:31446;50300:95017" height="32px" border-radius="4px">
+                            <Container id="I183:31446;50300:95017;59149:19021" width="441px" height="32px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="4px" />
+                            <Container id="I183:31446;50300:95017;59149:19022" position="absolute" top="0px" left="0px" height="32px" display="flex" flex-direction="row" align-items="center" gap="12px" padding="6px 12px">
+                                <Text id="I183:31446;50300:95017;59149:19022;50300:85234;10943:109622" font-family="PingFang SC" font-size="14px" color="#898B8F">业务专项</Text>
+                                <Text id="I183:31446;50300:95017;59149:19022;11173:113534" font-family="PingFang SC" font-size="14px" color="#252931">全部业务专项</Text>
+                            </Container>
+                            <Container id="I183:31446;50300:95017;59149:19023" position="absolute" top="50%" right="7.5px" width="16px" height="16px" transform="translateY(-50%)">
+                                <Icon id="I183:31446;50300:95017;59149:19023;48:80" name="chevron-down" width="9.33px" height="5.18px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/70656b21-59c5-4458-9cf7-70c5f62826df" image-format="png"/>
+                            </Container>
+                        </Container>
+                    </Select>
+                </Container>
+
+                <!-- Action Bar -->
+                <Container id="208:37964" display="flex" flex-direction="row" justify-content="space-between" align-items="center" height="32px">
+                    <Text id="208:37965" font-family="PingFang SC" font-size="16px" font-weight="500" line-height="24px" color="#17171A">复盘报告列表</Text>
+                    <Button id="208:80634" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="2px" padding="6px 16px" height="32px" background-color="#FFFFFF" border="1px solid #1966FF" border-radius="4px" impl-role="button">
+                        <Container id="I208:80634;11486:117441" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="2px">
+                            <Icon id="I208:80634;11486:117442;61:124" name="add" width="9px" height="9px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c40dc615-7723-4640-8559-d050660a0612" image-format="png"/>
+                            <Text id="I208:80634;11486:117443" font-family="PingFang SC" font-size="14px" color="#1966FF">新建报告</Text>
+                        </Container>
+                    </Button>
+                </Container>
+
+                <!-- Data Table (Column-based Layout) -->
+                <Container id="110:29840" display="flex" flex-direction="row" justify-content="flex-end" border="1px solid #EEEFF0" border-radius="4px" impl-role="table" impl-web="Flexbox(row)">
+                    
+                    <!-- Column 1: Expand/Checkbox -->
+                    <Container id="110:33119" display="flex" flex-direction="column" justify-content="center" align-items="center" width="40px" impl-role="column">
+                        <Container id="110:33120" display="flex" flex-direction="row" justify-content="center" align-items="center" padding="12px" height="88px" background-color="#F8F9FA" impl-role="column-header" />
+                        <!-- Row 1 -->
+                        <Container id="110:33121" display="flex" flex-direction="row" justify-content="center" align-items="center" padding="14px 12px" height="44px" background-color="#FFFFFF" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Icon id="I110:33121;67557:46059" name="expand-down" width="8.81px" height="5.21px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7f515ed8-0e93-4acc-ae6d-1b56f6fd6399" image-format="png"/>
+                        </Container>
+                        <!-- Row 2 -->
+                        <Container id="110:33122" display="flex" flex-direction="row" justify-content="center" align-items="center" padding="14px 12px" height="44px" background-color="#FFFFFF" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Icon id="110:33125" name="expand-up" width="8.81px" height="5.21px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/969a3c04-4c95-4b85-b5e5-d97fc1122095" image-format="png"/>
+                        </Container>
+                        <!-- Other Rows (Empty/Placeholders) -->
+                        <Container id="110:33126" height="44px" background-color="#F8F9FA" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1)" />
+                        <Container id="110:33127" height="44px" background-color="#F8F9FA" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1)" />
+                        <Container id="110:33128" height="44px" background-color="#F8F9FA" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1)" />
+                        <Container id="110:33129" height="44px" background-color="#F8F9FA" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1)" />
+                        <Container id="110:33130" display="flex" flex-direction="row" justify-content="center" align-items="center" padding="14px 12px" height="44px" background-color="#FFFFFF" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1)">
+                            <Icon id="I110:33130;67557:46059" name="expand-down" width="8.81px" height="5.21px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/cd6454c4-a038-4408-82e4-a233a712ed4b" image-format="png"/>
+                        </Container>
+                    </Container>
+
+                    <!-- Column 2: Report Name -->
+                    <Container id="110:33131" display="flex" flex-direction="column" flex-grow="1" width="304px" impl-role="column">
+                        <Container id="110:33132" display="flex" flex-direction="row" align-items="center" gap="2px" padding="12px" height="88px" background-color="#F8F9FA" box-shadow="inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="column-header">
+                            <Text id="I110:33132;10647:65441" font-family="PingFang SC" font-size="12px" font-weight="500" color="#252931">报告名称</Text>
+                        </Container>
+                        <!-- Rows -->
+                        <Container id="110:33133" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="2px" padding="14px 12px" height="44px" background-color="#FFFFFF" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1), inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Text id="I110:33133;68351:41905" font-family="PingFang SC" font-size="12px" color="#252931">8月加补-整体</Text>
+                        </Container>
+                        <Container id="110:33134" display="flex" flex-direction="row" align-items="center" gap="2px" padding="14px 12px" height="44px" background-color="#FFFFFF" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1), inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Text id="I110:33134;68351:41905" font-family="PingFang SC" font-size="12px" color="#252931">8月加补-重点品</Text>
+                        </Container>
+                        <Container id="110:33135" display="flex" flex-direction="row" align-items="center" gap="2px" padding="14px 12px" height="44px" background-color="#F8F9FA" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1), inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Text id="I110:33135;68351:41905" font-family="PingFang SC" font-size="12px" color="#252931">营销</Text>
+                        </Container>
+                        <Container id="110:33136" display="flex" flex-direction="row" align-items="center" gap="2px" padding="14px 12px" height="44px" background-color="#F8F9FA" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1), inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Text id="I110:33136;68351:41905" font-family="PingFang SC" font-size="12px" color="#252931">招商活动</Text>
+                        </Container>
+                        <Container id="110:33137" display="flex" flex-direction="row" align-items="center" gap="2px" padding="14px 12px" height="44px" background-color="#F8F9FA" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1), inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Text id="I110:33137;68351:41905" font-family="PingFang SC" font-size="12px" color="#252931">策略名称策略名称策略名称</Text>
+                        </Container>
+                        <Container id="110:33138" display="flex" flex-direction="row" align-items="center" gap="2px" padding="14px 12px" height="44px" background-color="#F8F9FA" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1), inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Text id="I110:33138;68351:41905" font-family="PingFang SC" font-size="12px" color="#252931">策略名称策略名称策略名称策略名称策略名称</Text>
+                        </Container>
+                        <Container id="110:33139" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="2px" padding="14px 12px" height="44px" background-color="#FFFFFF" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1), inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Text id="I110:33139;68351:41905" font-family="PingFang SC" font-size="12px" color="#252931">猜你喜欢-优质品扶持</Text>
+                        </Container>
+                    </Container>
+
+                    <!-- Column 3: Business Special -->
+                    <Container id="110:33185" display="flex" flex-direction="column" width="72px" impl-role="column">
+                        <Container id="110:33186" display="flex" flex-direction="row" align-items="center" gap="2px" padding="12px" height="88px" background-color="#F8F9FA" box-shadow="inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="column-header">
+                            <Text id="I110:33186;10647:65441" font-family="PingFang SC" font-size="12px" font-weight="500" color="#252931">业务专项</Text>
+                        </Container>
+                        <Container id="200:109402" display="flex" flex-direction="row" align-items="center" gap="2px" padding="14px 12px" height="44px" background-color="#FFFFFF" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1), inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Text id="I200:109402;68351:41905" font-family="PingFang SC" font-size="12px" color="#252931">8月加补</Text>
+                        </Container>
+                        <Container id="200:109422" display="flex" flex-direction="row" align-items="center" gap="2px" padding="14px 12px" height="44px" background-color="#FFFFFF" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1), inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Text id="I200:109422;68351:41905" font-family="PingFang SC" font-size="12px" color="#252931">8月加补</Text>
+                        </Container>
+                        <!-- ... other rows ... -->
+                    </Container>
+
+                    <!-- Column 4: Business Domain -->
+                    <Container id="200:109454" display="flex" flex-direction="column" width="60px" impl-role="column">
+                        <Container id="200:109455" display="flex" flex-direction="row" align-items="center" gap="2px" padding="12px" height="88px" background-color="#F8F9FA" box-shadow="inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="column-header">
+                            <Text id="I200:109455;10647:65441" font-family="PingFang SC" font-size="12px" font-weight="500" color="#252931">业务域</Text>
+                        </Container>
+                        <Container id="200:109456" display="flex" flex-direction="row" align-items="center" gap="2px" padding="14px 12px" height="44px" background-color="#FFFFFF" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1), inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Text id="I200:109456;68351:41905" font-family="PingFang SC" font-size="12px" color="#252931">市集</Text>
+                        </Container>
+                        <!-- ... other rows ... -->
+                    </Container>
+
+                    <!-- Column 5: Strategy Attribution -->
+                    <Container id="110:33329" display="flex" flex-direction="column" width="77px" impl-role="column">
+                        <Container id="110:33330" display="flex" flex-direction="row" align-items="center" gap="2px" padding="12px" height="88px" background-color="#F8F9FA" box-shadow="inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="column-header">
+                            <Text id="I110:33330;10647:65441" font-family="PingFang SC" font-size="12px" font-weight="500" color="#252931">策略归属</Text>
+                        </Container>
+                        <Container id="110:33435" display="flex" flex-direction="row" align-items="center" gap="2px" padding="14px 12px" height="44px" background-color="#FFFFFF" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1), inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Text id="I110:33435;68351:41905" font-family="PingFang SC" font-size="12px" color="#252931">1个策略</Text>
+                        </Container>
+                        <!-- Tag Cell -->
+                        <Container id="110:33334" display="flex" flex-direction="row" align-items="center" gap="4px" padding="14px 12px" height="44px" background-color="#F8F9FA" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1), inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Chip id="I110:33334;50877:70268" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="2px" padding="0px 4px" background-color="#EBFBF5" border-radius="2px">
+                                <Text id="I110:33334;50877:70268;858:830" font-family="PingFang SC" font-size="12px" color="#00C87F">C侧策略</Text>
+                            </Chip>
+                        </Container>
+                        <!-- Tag Cell Blue -->
+                        <Container id="110:33333" display="flex" flex-direction="row" align-items="center" gap="4px" padding="14px 12px" height="44px" background-color="#F8F9FA" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1), inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Chip id="I110:33333;50877:70268" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="10px" padding="0px 4px" background-color="#EBF3FF" border-radius="2px">
+                                <Text id="I110:33333;50877:70268;858:818" font-family="PingFang SC" font-size="12px" color="#1966FF">B侧策略</Text>
+                            </Chip>
+                        </Container>
+                    </Container>
+
+                    <!-- Column Group: Metrics -->
+                    <Container id="110:29961" display="flex" flex-direction="column" width="480px" impl-role="column-group">
+                        <!-- Group Header -->
+                        <Container id="110:29962" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="2px" padding="12px" height="44px" background-color="#F8F9FA" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1), inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="column-header">
+                            <Text id="I110:29962;10647:65441" font-family="PingFang SC" font-size="12px" font-weight="500" color="#252931">策略覆盖面指标</Text>
+                        </Container>
+                        <!-- Sub-Columns Container -->
+                        <Container id="110:29963" display="flex" flex-direction="row" align-items="center" flex-grow="1">
+                            <!-- Sub-Column 1: Product Count -->
+                            <Container id="110:29964" display="flex" flex-direction="column" width="120px">
+                                <Container id="110:29965" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" gap="2px" padding="12px" height="44px" background-color="#F8F9FA" impl-role="column-header">
+                                    <Text id="I110:29965;10647:65441" font-family="PingFang SC" font-size="12px" font-weight="500" color="#252931">覆盖商品数</Text>
+                                </Container>
+                                <Container id="110:29966" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" gap="2px" padding="14px 12px" height="44px" background-color="#FFFFFF" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                                    <Text id="I110:29966;17416:151794" font-family="PingFang SC" font-size="12px" color="#252931">9,999.99万</Text>
+                                </Container>
+                                <!-- ... other rows ... -->
+                            </Container>
+                            <!-- Sub-Column 2: Exposure PV -->
+                            <Container id="110:33889" display="flex" flex-direction="column" width="120px">
+                                <Container id="110:33890" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" gap="2px" padding="12px" height="44px" background-color="#F8F9FA" impl-role="column-header">
+                                    <Text id="I110:33890;10647:65441" font-family="PingFang SC" font-size="12px" font-weight="500" color="#252931">覆盖商品曝光PV</Text>
+                                </Container>
+                                <Container id="110:33891" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" gap="2px" padding="14px 12px" height="44px" background-color="#FFFFFF" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                                    <Text id="I110:33891;17416:151794" font-family="PingFang SC" font-size="12px" color="#252931">9,999.99万</Text>
+                                </Container>
+                                <!-- ... other rows ... -->
+                            </Container>
+                            <!-- Sub-Column 3: Order Count -->
+                            <Container id="110:33943" display="flex" flex-direction="column" width="120px">
+                                <Container id="110:33944" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" gap="2px" padding="12px" height="44px" background-color="#F8F9FA" impl-role="column-header">
+                                    <Text id="I110:33944;10647:65441" font-family="PingFang SC" font-size="12px" font-weight="500" color="#252931">覆盖商品订单数</Text>
+                                </Container>
+                                <Container id="110:33945" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" gap="2px" padding="14px 12px" height="44px" background-color="#FFFFFF" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                                    <Text id="I110:33945;17416:151794" font-family="PingFang SC" font-size="12px" color="#252931">9,999.99万</Text>
+                                </Container>
+                                <!-- ... other rows ... -->
+                            </Container>
+                            <!-- Sub-Column 4: GMV -->
+                            <Container id="110:33917" display="flex" flex-direction="column" width="120px">
+                                <Container id="110:33918" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" gap="2px" padding="12px" height="44px" background-color="#F8F9FA" box-shadow="inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="column-header">
+                                    <Text id="I110:33918;10647:65441" font-family="PingFang SC" font-size="12px" font-weight="500" color="#252931">覆盖商品GMV</Text>
+                                </Container>
+                                <Container id="110:33919" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" gap="2px" padding="14px 12px" height="44px" background-color="#FFFFFF" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                                    <Text id="I110:33919;17416:151794" font-family="PingFang SC" font-size="12px" color="#252931">9,999.99万</Text>
+                                </Container>
+                                <!-- ... other rows ... -->
+                            </Container>
+                        </Container>
+                    </Container>
+
+                    <!-- Column 7: Effective Date -->
+                    <Container id="110:33506" display="flex" flex-direction="column" width="148px" impl-role="column">
+                        <Container id="110:33507" display="flex" flex-direction="row" align-items="center" gap="2px" padding="12px" height="88px" background-color="#F8F9FA" box-shadow="inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="column-header">
+                            <Text id="I110:33507;10647:65441" font-family="PingFang SC" font-size="12px" font-weight="500" color="#252931">生效日期</Text>
+                        </Container>
+                        <Container id="110:33560" display="flex" flex-direction="row" align-items="center" gap="2px" padding="14px 12px" height="44px" background-color="#FFFFFF" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1), inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Text id="I110:33560;68351:41905" font-family="PingFang SC" font-size="12px" color="#252931">汇总</Text>
+                        </Container>
+                        <Container id="110:33510" display="flex" flex-direction="row" align-items="center" gap="2px" padding="14px 12px" height="44px" background-color="#F8F9FA" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1), inset -1px 0px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Text id="I110:33510;10660:70130" font-family="PingFang SC" font-size="12px" color="#252931">2022/08/28 23:59:59</Text>
+                        </Container>
+                    </Container>
+
+                    <!-- Column 8: Operation -->
+                    <Container id="110:33722" display="flex" flex-direction="column" width="108px" impl-role="column">
+                        <Container id="110:33723" display="flex" flex-direction="row" align-items="center" gap="2px" padding="12px" height="88px" background-color="#F8F9FA" impl-role="column-header">
+                            <Text id="I110:33723;10651:67885" font-family="PingFang SC" font-size="12px" font-weight="500" color="#252931">操作</Text>
+                        </Container>
+                        <Container id="110:33724" display="flex" flex-direction="row" align-items="center" gap="12px" padding="14px 12px" height="44px" background-color="#FFFFFF" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Text id="I110:33724;10651:67899" font-family="PingFang SC" font-size="12px" color="#1966FF">复盘报告</Text>
+                            <Text id="I110:33724;67574:41973" font-family="PingFang SC" font-size="12px" color="#1966FF">设置</Text>
+                        </Container>
+                        <Container id="110:33725" display="flex" flex-direction="row" align-items="center" gap="12px" padding="14px 12px" height="44px" background-color="#FFFFFF" box-shadow="inset 0px -1px 0px 0px rgba(238, 239, 240, 1)" impl-role="cell">
+                            <Text id="I110:33725;10651:67899" font-family="PingFang SC" font-size="12px" color="#1966FF">复盘报告</Text>
+                            <Text id="I110:33725;67574:41973" font-family="PingFang SC" font-size="12px" color="#1966FF">设置</Text>
+                        </Container>
+                        <!-- ... other rows ... -->
+                    </Container>
+
+                </Container>
+            </Container>
+        </Container>
+    </Screen>
+</MainUI>
+<Emphasis>Focus on the MainUI section's XML structure, which contains the page UI information for code generation. Pay attention to component-use attributes and prioritize using these recommended components during code implementation.</Emphasis>

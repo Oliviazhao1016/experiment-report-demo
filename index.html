@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复盘报告列表 - 商城经分中台</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <nav class="navbar justify-between">
+        <div class="nav-item active">复盘报告列表</div>
+        <div class="flex gap-4 items-center mr-4">
+            <div class="flex items-center gap-2">
+                <span class="text-secondary text-xs">业务域:</span>
+                <div class="select-wrapper">
+                    <select class="input h-8 text-xs" style="width: 120px; padding-right:24px;">
+                        <option>商城经分中台</option>
+                        <option>直播业务</option>
+                        <option>泛架货</option>
+                    </select>
+                    <img src="assets/icons/chevron-down.png" width="10" class="icon-chevron">
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="text-secondary text-xs">行业赛道:</span>
+                <div class="select-wrapper">
+                    <select class="input h-8 text-xs bg-gray-100 text-tertiary" style="width: 120px; padding-right:24px;" disabled>
+                        <option>大盘</option>
+                    </select>
+                    <img src="assets/icons/chevron-down.png" width="10" class="icon-chevron opacity-50">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="flex justify-between items-center">
+            <div class="page-title">
+                复盘报告列表
+                <span class="page-subtitle">查看业务专项、单一策略的复盘报告，创建新的货盘复盘报告</span>
+            </div>
+            <div class="flex gap-4" style="opacity: 0;"> <!-- Hidden but layout preserved -->
+                <div class="input w-48">分析视图</div>
+            </div>
+        </div>
+
+        <div class="page-tabs">
+            <div class="page-tab active">业务专项复盘报告</div>
+            <div class="page-tab">策略复盘报告</div>
+            <div class="page-tab">自定义复盘报告</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Filter Bar -->
+        <div class="filter-bar justify-between">
+            <div class="flex gap-4 items-center">
+                <!-- Date Range -->
+                <div class="filter-item w-64">
+                    <span class="filter-label">分析周期</span>
+                    <span class="filter-value">2025/02/01 - 2025/02/08</span>
+                    <img src="assets/icons/calendar.png" width="14" class="ml-auto" style="margin-left: auto;">
+                </div>
+                
+                <!-- Business Domain (Removed as it moved to top nav) -->
+                <!-- <div class="filter-item w-48">
+                    <span class="filter-label">业务域</span>
+                    <span class="filter-value">商城经分中台</span>
+                    <img src="assets/icons/chevron-down.png" width="10" style="margin-left: auto;">
+                </div> -->
+
+                <!-- Search -->
+                <input type="text" class="input w-64" placeholder="专项名称 (报告名称)">
+                <button class="btn btn-primary">查询</button>
+            </div>
+
+            <!-- New Report Button -->
+            <button class="btn btn-secondary" onclick="openNewReportModal()">
+                <img src="assets/icons/plus.png" width="10" style="margin-right: 6px;">
+                新建报告
+            </button>
+        </div>
+
+        <!-- Table -->
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th style="width: 40px;"></th>
+                    <th>报告名称</th>
+                    <th>策略归属</th>
+                    <th>创建人</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center"><img src="assets/icons/chevron-down-sm.png" width="10"></td>
+                    <td>
+                        <div style="font-weight: 500;">【超值购】专项</div>
+                        <div class="text-secondary text-xs mt-1">ID: 26</div>
+                    </td>
+                    <td>6个策略</td>
+                    <td>
+                        <div class="flex items-center gap-2">
+                            <div style="width:24px;height:24px;background:#E0E0E0;border-radius:50%;"></div>
+                            赵欣蕊
+                        </div>
+                    </td>
+                    <td>
+                        <a href="report_detail.html" class="btn-link">复盘报告</a>
+                        <button class="btn-link">设置</button>
+                        <button class="btn-link" onclick="openDrawer('【超值购】专项')">策略管理</button>
+                        <span class="status-badge status-warning">3个待打标</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"><img src="assets/icons/chevron-down-sm.png" width="10"></td>
+                    <td>
+                        <div style="font-weight: 500;">纸尿裤品类机会</div>
+                        <div class="text-secondary text-xs mt-1">ID: 25</div>
+                    </td>
+                    <td>0个策略</td>
+                    <td>
+                        <div class="flex items-center gap-2">
+                            <div style="width:24px;height:24px;background:#E0E0E0;border-radius:50%;"></div>
+                            王筱雯
+                        </div>
+                    </td>
+                    <td>
+                        <a href="report_detail.html" class="btn-link">复盘报告</a>
+                        <button class="btn-link">设置</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"><img src="assets/icons/chevron-down-sm.png" width="10"></td>
+                    <td>
+                        <div style="font-weight: 500;">专项1</div>
+                        <div class="text-secondary text-xs mt-1">ID: 24</div>
+                    </td>
+                    <td>2个策略</td>
+                    <td>
+                        <div class="flex items-center gap-2">
+                            <div style="width:24px;height:24px;background:#E0E0E0;border-radius:50%;"></div>
+                            赵欣蕊
+                        </div>
+                    </td>
+                    <td>
+                        <a href="report_detail.html" class="btn-link">复盘报告</a>
+                        <button class="btn-link">设置</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <!-- New Report Modal -->
+    <div class="modal-overlay" id="newReportModal">
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-title">新建业务专项复盘报告</div>
+                <button class="btn-link" onclick="closeNewReportModal()"><img src="assets/icons/close.png" width="12"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Basic Info -->
+                <div class="mb-6">
+                    <h3 class="text-sm font-medium mb-4">报告基本信息</h3>
+                    <div class="flex gap-4 mb-4 items-center">
+                        <label class="w-32 text-right text-secondary">报告名称</label>
+                        <input type="text" class="input flex-1" placeholder="请输入">
+                    </div>
+                    
+                    <!-- Strategy Filter -->
+                    <div class="flex gap-4 mb-4 items-start">
+                        <label class="w-32 text-right text-secondary mt-2">筛选条件</label>
+                        <div class="flex-1">
+                            <div id="report-filter-container" class="flex flex-col gap-3 mb-2">
+                                <!-- Dynamic Rows -->
+                            </div>
+                            <button id="add-report-filter-btn" class="btn btn-secondary text-xs" onclick="addReportFilter()">+ 添加筛选条件</button>
+                            <div class="text-xs text-tertiary mt-1">最多添加3个条件，策略方向/二级部门支持多选</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analysis Config -->
+                <div>
+                    <h3 class="text-sm font-medium mb-4">分析指标配置</h3>
+                    
+                    <!-- Metric Selector -->
+                    <div class="metric-selector">
+                        <div class="metric-groups">
+                            <div class="metric-group-item active">
+                                业务专项&策略覆盖指标 (4/4)
+                                <img src="assets/icons/chevron-down.png" width="10">
+                            </div>
+                            <div class="metric-group-item">
+                                大盘指标 (27/27)
+                                <img src="assets/icons/chevron-down.png" width="10">
+                            </div>
+                            <div class="metric-group-item">
+                                达标指标 (27/27)
+                                <img src="assets/icons/chevron-down.png" width="10">
+                            </div>
+                            <div class="metric-group-item">
+                                气泡图指标 (8/8)
+                                <img src="assets/icons/chevron-down.png" width="10">
+                            </div>
+                        </div>
+                        <div class="metric-list">
+                            <div class="input w-full mb-4 flex items-center">
+                                <img src="assets/icons/search.png" width="14" class="mr-2">
+                                <input type="text" placeholder="搜索指标名称..." style="border:none; outline:none; width:100%;">
+                            </div>
+                            <div class="metric-checkbox">
+                                <input type="checkbox" checked> 覆盖商品数
+                            </div>
+                            <div class="metric-checkbox">
+                                <input type="checkbox" checked> 覆盖商品曝光PV
+                            </div>
+                            <div class="metric-checkbox">
+                                <input type="checkbox" checked> 覆盖商品订单数
+                            </div>
+                            <div class="metric-checkbox">
+                                <input type="checkbox" checked> 覆盖商品GMV
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeNewReportModal()">取消</button>
+                <button class="btn btn-primary" onclick="closeNewReportModal()">确定</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Strategy Management Drawer -->
+    <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+    <div class="drawer" id="strategyDrawer">
+        <div class="drawer-header">
+            <h3 style="margin: 0;">策略信息管理 - <span id="drawerTitle"></span></h3>
+            <button class="btn-link" onclick="closeDrawer()"><img src="assets/icons/close.png" width="14"></button>
+        </div>
+        <div class="drawer-body">
+            <div style="margin-bottom: 16px; font-size: 13px; color: #666; background: #e6f7ff; padding: 12px; border: 1px solid #91d5ff; border-radius: 4px;">
+                <span style="margin-right: 8px;">ℹ️</span>
+                请完善以下策略的业务属性，以便生成更准确的归因分析报告。
+            </div>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30px;"><input type="checkbox" onclick="toggleAll(this)"></th>
+                        <th style="width: 30%">实验名称</th>
+                        <th style="width: 25%">策略方向 <span style="color:red">*</span></th>
+                        <th style="width: 25%">二级部门 <span style="color:red">*</span></th>
+                        <th style="width: 20%">可推全 <span style="color:red">*</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="row-checkbox" onclick="updateSelectionStatus()"></td>
+                        <td>新入口样式优化实验_V3</td>
+                        <td>
+                            <div class="editable-cell" onclick="editCell(this, 'direction')">UI交互</div>
+                        </td>
+                        <td>
+                            <div class="editable-cell" onclick="editCell(this, 'dept')">商城产品部</div>
+                        </td>
+                        <td>
+                            <div class="editable-cell" onclick="editCell(this, 'bool')">是</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="row-checkbox" onclick="updateSelectionStatus()"></td>
+                        <td>猜你喜欢算法模型迭代_B2</td>
+                        <td>
+                            <div class="editable-cell empty" onclick="editCell(this, 'direction')">点击选择</div>
+                        </td>
+                        <td>
+                            <div class="editable-cell" onclick="editCell(this, 'dept')">推荐算法部</div>
+                        </td>
+                        <td>
+                            <div class="editable-cell empty" onclick="editCell(this, 'bool')">点击选择</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="drawer-footer flex-col gap-4">
+            <!-- Bulk Actions (Hidden by default) -->
+            <div id="bulk-actions" class="hidden flex gap-2 w-full p-2 bg-gray-100 rounded items-center">
+                <span class="text-xs font-medium">批量设置:</span>
+                <button class="btn btn-secondary text-xs h-6 px-2" onclick="applyBulkEdit('direction')">策略方向</button>
+                <button class="btn btn-secondary text-xs h-6 px-2" onclick="applyBulkEdit('dept')">二级部门</button>
+                <button class="btn btn-secondary text-xs h-6 px-2" onclick="applyBulkEdit('bool')">可推全</button>
+            </div>
+
+            <div class="flex justify-between items-center w-full">
+                <div class="text-secondary text-xs" id="selected-count">已选 0 项</div>
+                <div class="flex gap-2">
+                    <button class="btn btn-secondary" onclick="closeDrawer()">取消</button>
+                    <button class="btn btn-primary" onclick="saveDrawer()">保存并更新</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/list_script.js"></script>
+</body>
+</html>

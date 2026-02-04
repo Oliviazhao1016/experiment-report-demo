@@ -1,0 +1,394 @@
+<!-- D2C Generated XML - Figma URL: https://www.figma.com/design/zNQUjHBcxxtV8Tp2ve0oWq/%E8%B4%A7%E7%9B%98%E5%A4%8D%E7%9B%98-%E8%AE%BE%E8%AE%A1%E7%A8%BF?node-id=208-81945&t=GPfBiVcf7WGQDHtE-4 -->
+<!-- Generated at: 2026-02-04T03:59:45.857Z -->
+<!-- 🗑️ This is a temporary file, please delete after code generation -->
+
+<MainUI pv="v260203.web.en" xml-id="1976e1d95ebf58d8">
+    <Screen id="208:81945" codegen-summary="New Business Special Review Report creation form with multi-step analysis configuration" background-color="#FFFFFF" display="flex" flex-direction="column" align-items="center">
+        
+        <!-- Header -->
+        <Header id="208:81946" height="55px" display="flex" flex-direction="column" justify-content="space-between" align-items="center" gap="16px" padding="16px 0px 0px" align-self="stretch" impl-role="header">
+            <Container id="208:81947" height="22px" display="flex" flex-direction="row" justify-content="space-between" align-items="center" gap="17px" padding="0px 24px" align-self="stretch">
+                <Container id="208:81948" width="160px" height="22px" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="8px">
+                    <Text id="208:81949" font-family="PingFang SC" font-size="16px" font-weight="500" line-height="1.38em" color="#252931" white-space="nowrap">新建业务专项复盘报告</Text>
+                </Container>
+                <!-- Close Button -->
+                <IconButton id="208:81951" width="13.83px" height="13.78px" border-radius="3px" impl-role="button" aria-label="Close">
+                    <Container id="208:81952" position="absolute" width="13.83px" height="13.78px" top="0px" left="0px" border-radius="3px">
+                        <Box id="208:81953" position="absolute" width="13.7px" height="13.7px" top="0.08px" left="0px" background-color="#85878A" border-radius="3px" transform="rotate(45deg)" />
+                        <Box id="208:81954" position="absolute" width="13.7px" height="13.7px" top="0px" left="0.13px" background-color="#85878A" border-radius="3px" transform="rotate(-45deg)" />
+                    </Container>
+                </IconButton>
+            </Container>
+            <Divider id="208:81956" width="100%" height="1px" background-color="#EDEEF0" />
+        </Header>
+
+        <!-- Main Form Content -->
+        <ScrollView id="208:81957" display="flex" flex-direction="column" gap="24px" padding="24px 24px 0px" align-self="stretch" overflow-y="auto" impl-role="form">
+            
+            <!-- Section 1: Basic Info -->
+            <Section id="208:81958" display="flex" flex-direction="column" gap="16px" align-self="stretch">
+                <!-- Section Title -->
+                <Container id="208:81959" width="84px" height="20px" display="flex" flex-direction="row" align-items="center" gap="2px">
+                    <Text id="208:81960" font-family="PingFang SC" font-size="14px" font-weight="500" color="#252931">报告基本信息</Text>
+                </Container>
+
+                <!-- Field: Report Name -->
+                <Container id="208:81962" display="flex" flex-direction="row" gap="16px" align-self="stretch">
+                    <Container id="208:81963" width="154px" height="32px" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" gap="2px">
+                        <Text id="I208:81963;10943:109638" font-family="PingFang SC" font-size="14px" color="#898B8F" text-align="right">报告名称</Text>
+                    </Container>
+                    <Input id="208:81964" width="744px" height="32px" display="flex" flex-direction="column" gap="4px" impl-web="input" impl-behavior="input value('20258月加补-应季品')">
+                        <Container id="208:81965" height="32px" align-self="stretch">
+                            <Container id="I208:81965;29225:240431" position="absolute" top="0px" right="0px" bottom="0px" left="0px" display="flex" flex-direction="row" align-items="center" padding="0px 0px 0px 12px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="4px" />
+                            <Container id="I208:81965;29225:240432" position="absolute" top="0px" right="0px" bottom="0px" left="0px" display="flex" flex-direction="row" align-items="center" gap="2px" padding="6px 12px">
+                                <Text id="I208:81965;29225:240432;300:453" font-family="PingFang SC" font-size="14px" color="#252931">20258月加补-应季品</Text>
+                            </Container>
+                        </Container>
+                    </Input>
+                </Container>
+
+                <!-- Field: Business Domain -->
+                <Container id="208:82701" display="flex" flex-direction="row" gap="16px" align-self="stretch">
+                    <Container id="208:82702" width="154px" height="32px" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" gap="2px">
+                        <Text id="I208:82702;10943:109638" font-family="PingFang SC" font-size="14px" color="#898B8F" text-align="right">所属业务域</Text>
+                    </Container>
+                    <Select id="208:82703" width="744px" height="32px" display="flex" flex-direction="column" gap="4px" impl-web="select" impl-behavior="select placeholder('请选择')">
+                        <Container id="208:82704" height="32px" align-self="stretch" border-radius="4px">
+                            <Container id="I208:82704;722:442" position="absolute" height="32px" top="0px" right="0px" left="0px" display="flex" flex-direction="row" align-items="center" padding="0px 0px 0px 12px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="4px" />
+                            <Container id="I208:82704;722:443" position="absolute" height="32px" top="0px" right="0px" left="0px" display="flex" flex-direction="row" align-items="center" gap="2px" padding="6px 0px 6px 12px">
+                                <Text id="I208:82704;722:443;300:460" font-family="PingFang SC" font-size="14px" color="#BCBDC0">请选择</Text>
+                            </Container>
+                            <Icon id="I208:82704;722:444" name="chevron-down" position="absolute" width="16px" height="16px" top="50%" right="8px" transform="translateY(-50%)"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8b8af669-6a0d-44d3-8549-6c9a40ff99e1" image-format="png"/>
+                        </Container>
+                    </Select>
+                </Container>
+
+                <!-- Field: Special Project -->
+                <Container id="208:81967" display="flex" flex-direction="row" gap="16px" align-self="stretch">
+                    <Container id="208:81968" width="154px" height="32px" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" gap="2px">
+                        <Text id="I208:81968;10943:109638" font-family="PingFang SC" font-size="14px" color="#898B8F" text-align="right">所属专项</Text>
+                    </Container>
+                    <Select id="208:81969" width="742px" height="32px" display="flex" flex-direction="column" gap="4px" impl-web="select" impl-behavior="select placeholder('请选择')">
+                        <Container id="208:81970" height="32px" align-self="stretch" border-radius="4px">
+                            <Container id="I208:81970;722:442" position="absolute" height="32px" top="0px" right="0px" left="0px" display="flex" flex-direction="row" align-items="center" padding="0px 0px 0px 12px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="4px" />
+                            <Container id="I208:81970;722:443" position="absolute" height="32px" top="0px" right="0px" left="0px" display="flex" flex-direction="row" align-items="center" gap="2px" padding="6px 0px 6px 12px">
+                                <Text id="I208:81970;722:443;300:460" font-family="PingFang SC" font-size="14px" color="#BCBDC0">请选择</Text>
+                            </Container>
+                            <Icon id="I208:81970;722:444" name="chevron-down" position="absolute" width="16px" height="16px" top="50%" right="8px" transform="translateY(-50%)"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7f023a20-e9a3-4ccd-af1f-00f953a37c05" image-format="png"/>
+                        </Container>
+                    </Select>
+                </Container>
+
+                <!-- Field: Analysis Goods (Read-only Tags) -->
+                <Container id="208:82730" display="flex" flex-direction="row" gap="16px" align-self="stretch">
+                    <Container id="208:82731" width="154px" height="32px" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" gap="2px">
+                        <Text id="I208:82731;10943:109638" font-family="PingFang SC" font-size="14px" color="#898B8F" text-align="right">分析货盘</Text>
+                    </Container>
+                    <Container id="208:82780" width="742px" height="36px" display="flex" flex-direction="row" gap="16px" padding="8px" background-color="#F8F9FA" border-radius="4px" flex-grow="1">
+                        <Container id="208:82782" width="581px" height="20px" display="flex" flex-direction="row" align-items="center" gap="8px">
+                            <!-- Tag Group 1 -->
+                            <Container id="208:82785" display="flex" flex-direction="row">
+                                <Tag id="208:82786" width="56px" height="16px" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="2px" padding="0px 4px" background-color="rgba(0, 0, 0, 0.08)" border-radius="2px 0px 0px 2px">
+                                    <Text id="I208:82786;28939:245030" font-family="PingFang SC" font-size="12px" color="#212533">市集项目</Text>
+                                </Tag>
+                                <Tag id="208:82787" width="80px" height="16px" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="10px" padding="0px 4px" background-color="#FFFFFF" border="1px solid rgba(0, 0, 0, 0.08)" border-radius="0px 2px 2px 0px">
+                                    <Text id="I208:82787;28939:244958" font-family="PingFang SC" font-size="12px" color="#212533">20258月加补</Text>
+                                </Tag>
+                            </Container>
+                            <!-- Tag Group 2 -->
+                            <Container id="208:83346" display="flex" flex-direction="row">
+                                <Tag id="208:83347" width="68px" height="16px" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="2px" padding="0px 4px" background-color="rgba(0, 0, 0, 0.08)" border-radius="2px 0px 0px 2px">
+                                    <Text id="I208:83347;28939:245030" font-family="PingFang SC" font-size="12px" color="#212533">是否应季品</Text>
+                                </Tag>
+                                <Tag id="208:83348" width="20px" height="16px" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="10px" padding="0px 4px" background-color="#FFFFFF" border="1px solid rgba(0, 0, 0, 0.08)" border-radius="0px 2px 2px 0px">
+                                    <Text id="I208:83348;28939:244958" font-family="PingFang SC" font-size="12px" color="#212533">是</Text>
+                                </Tag>
+                            </Container>
+                            <!-- Overflow Tag -->
+                            <Tag id="208:82797" width="23px" height="16px" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="2px" padding="0px 4px" background-color="#EEEEEF" border-radius="2px">
+                                <Text id="I208:82797;28939:245030" font-family="PingFang SC" font-size="12px" color="#212533">+2</Text>
+                            </Tag>
+                        </Container>
+                        <!-- Modify Button -->
+                        <Button id="208:82798" width="74px" height="20px" display="flex" flex-direction="row" align-items="center" gap="2px" impl-role="button">
+                            <Icon id="I208:82798;65:1151" name="edit" width="16px" height="16px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2ec278a4-d946-4c5a-a277-78fe564e68c0" image-format="png"/>
+                            <Text id="I208:82798;65:1130" font-family="PingFang SC" font-size="14px" color="#1966FF">修改筛选</Text>
+                        </Button>
+                    </Container>
+                </Container>
+            </Section>
+
+            <!-- Section 2: Strategy -->
+            <Section id="208:82898" display="flex" flex-direction="column" gap="16px" align-self="stretch">
+                <Container id="208:82899" width="144px" height="20px" display="flex" flex-direction="row" align-items="center" gap="2px">
+                    <Text id="208:82900" font-family="PingFang SC" font-size="14px" font-weight="500" color="#252931">选择希望分析的策略</Text>
+                    <Icon id="208:82901" name="help-circle" width="16px" height="16px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/de3ce02a-217c-40b3-b0d5-9559fbb9c0ec" image-format="png"/>
+                </Container>
+
+                <!-- Field: C-side Strategy -->
+                <Container id="208:82902" display="flex" flex-direction="row" gap="16px" align-self="stretch">
+                    <Container id="208:82903" width="154px" height="32px" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" gap="2px">
+                        <Text id="I208:82903;10943:109638" font-family="PingFang SC" font-size="14px" color="#898B8F" text-align="right">C侧策略</Text>
+                    </Container>
+                    <Select id="208:82904" width="744px" height="32px" display="flex" flex-direction="column" gap="4px" impl-web="select" impl-behavior="select placeholder('请选择')">
+                        <Container id="208:82905" height="32px" align-self="stretch" border-radius="4px">
+                            <Container id="I208:82905;722:442" position="absolute" height="32px" top="0px" right="0px" left="0px" display="flex" flex-direction="row" align-items="center" padding="0px 0px 0px 12px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="4px" />
+                            <Container id="I208:82905;722:443" position="absolute" height="32px" top="0px" right="0px" left="0px" display="flex" flex-direction="row" align-items="center" gap="2px" padding="6px 0px 6px 12px">
+                                <Text id="I208:82905;722:443;300:460" font-family="PingFang SC" font-size="14px" color="#BCBDC0">请选择</Text>
+                            </Container>
+                            <Icon id="I208:82905;722:444" name="chevron-down" position="absolute" width="16px" height="16px" top="50%" right="8px" transform="translateY(-50%)"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5071406f-aa71-44db-9682-9d367dbc0114" image-format="png"/>
+                        </Container>
+                    </Select>
+                </Container>
+
+                <!-- Field: B-side Strategy -->
+                <Container id="208:82907" display="flex" flex-direction="row" gap="16px" align-self="stretch">
+                    <Container id="208:82908" width="154px" height="32px" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" gap="2px">
+                        <Text id="I208:82908;10943:109638" font-family="PingFang SC" font-size="14px" color="#898B8F" text-align="right">B侧策略</Text>
+                    </Container>
+                    <Select id="208:82909" width="742px" height="32px" display="flex" flex-direction="column" gap="4px" impl-web="select" impl-behavior="select placeholder('请选择')">
+                        <Container id="208:82910" height="32px" align-self="stretch" border-radius="4px">
+                            <Container id="I208:82910;722:442" position="absolute" height="32px" top="0px" right="0px" left="0px" display="flex" flex-direction="row" align-items="center" padding="0px 0px 0px 12px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="4px" />
+                            <Container id="I208:82910;722:443" position="absolute" height="32px" top="0px" right="0px" left="0px" display="flex" flex-direction="row" align-items="center" gap="2px" padding="6px 0px 6px 12px">
+                                <Text id="I208:82910;722:443;300:460" font-family="PingFang SC" font-size="14px" color="#BCBDC0">请选择</Text>
+                            </Container>
+                            <Icon id="I208:82910;722:444" name="chevron-down" position="absolute" width="16px" height="16px" top="50%" right="8px" transform="translateY(-50%)"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/34b27bf1-2cdb-4da9-b04c-884b479b6729" image-format="png"/>
+                        </Container>
+                    </Select>
+                </Container>
+            </Section>
+
+            <!-- Section 3: Analysis Config -->
+            <Section id="208:81972" display="flex" flex-direction="column" gap="16px" align-self="stretch">
+                <Container id="208:81973" width="74px" height="20px" display="flex" flex-direction="row" align-items="center" gap="2px">
+                    <Text id="208:81974" font-family="PingFang SC" font-size="14px" font-weight="500" color="#252931">分析配置</Text>
+                    <Icon id="208:81975" name="help-circle" width="16px" height="16px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fd60dc94-7783-425c-b25c-2439d761e977" image-format="png"/>
+                </Container>
+
+                <!-- Stepper -->
+                <Stepper id="330:50418" height="32px" display="flex" flex-direction="row" align-self="stretch" impl-role="tablist">
+                    <!-- Step 1 (Active) -->
+                    <StepItem id="I330:50418;69584:38663" width="232.5px" height="32px" display="flex" flex-direction="row" align-items="center" gap="10px" flex-grow="1" selected="true">
+                        <Container id="I330:50418;69584:38663;69580:40027" display="flex" flex-direction="row" flex-grow="1">
+                            <Icon id="I330:50418;69584:38663;69580:40027;69538:39536" name="step-start" width="16px" height="32px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/75bf84a4-cb89-450b-a495-881cec0705f3" image-format="png"/>
+                            <Container id="I330:50418;69584:38663;69580:40027;69538:39537" height="32px" flex-grow="1" background-color="#4784FF" />
+                            <Icon id="I330:50418;69584:38663;69580:40027;69538:39538" name="step-end" width="16px" height="32px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/74ae33f7-5fe4-4e3b-a053-ce012dfc3104" image-format="png"/>
+                        </Container>
+                        <Container id="I330:50418;69584:38663;69580:39853" position="absolute" width="136px" height="20px" top="6px" left="16px" display="flex" flex-direction="row" align-items="center" gap="4px">
+                            <Container id="I330:50418;69584:38663;69580:39853;69580:39939" width="20px" height="20px" background-color="#8CB8FF" border-radius="20px">
+                                <Text id="I330:50418;69584:38663;69580:39853;69580:39939;69580:39925" position="absolute" top="0px" left="5px" font-family="PingFang SC" font-size="14px" font-weight="500" color="#FFFFFF">1</Text>
+                            </Container>
+                            <Text id="I330:50418;69584:38663;69580:39853;69538:39432" font-family="PingFang SC" font-size="14px" font-weight="500" color="#FFFFFF">第一步：分析指标</Text>
+                        </Container>
+                    </StepItem>
+                    <!-- Step 2 (Inactive) -->
+                    <StepItem id="I330:50418;69584:38664" width="232.5px" height="32px" display="flex" flex-direction="row" align-items="center" gap="10px" flex-grow="1">
+                        <Container id="I330:50418;69584:38664;69580:40056" display="flex" flex-direction="row" flex-grow="1">
+                            <Icon id="I330:50418;69584:38664;69580:40056;69538:39549" name="step-bg" width="16px" height="32px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8fbe4173-7508-4758-b409-ae4e9cce2c4e" image-format="png"/>
+                            <Container id="I330:50418;69584:38664;69580:40056;69538:39541" height="32px" flex-grow="1" background-color="#EBF3FF" />
+                            <Icon id="I330:50418;69584:38664;69580:40056;69538:39542" name="step-bg-end" width="16px" height="32px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/df0fbf8f-7e97-4535-8a5a-066b5b6071e6" image-format="png"/>
+                        </Container>
+                        <Container id="I330:50418;69584:38664;69580:40057" position="absolute" width="155px" height="20px" top="6px" left="16px" display="flex" flex-direction="row" align-items="center" gap="4px">
+                            <Container id="I330:50418;69584:38664;69580:40057;69580:39944" width="20px" height="20px" background-color="#8CB8FF" border-radius="20px">
+                                <Text id="I330:50418;69584:38664;69580:40057;69580:39944;69580:39925" position="absolute" top="0px" left="5px" font-family="PingFang SC" font-size="14px" font-weight="500" color="#FFFFFF">2</Text>
+                            </Container>
+                            <Text id="I330:50418;69584:38664;69580:40057;69538:39498" font-family="PingFang SC" font-size="14px" font-weight="500" color="#252931">第二步：AA分析设置</Text>
+                        </Container>
+                    </StepItem>
+                    <!-- Step 3 (Inactive) -->
+                    <StepItem id="I330:50418;69584:38665" width="232.5px" height="32px" display="flex" flex-direction="row" align-items="center" gap="10px" flex-grow="1">
+                        <Container id="I330:50418;69584:38665;69580:40056" display="flex" flex-direction="row" flex-grow="1">
+                            <Icon id="I330:50418;69584:38665;69580:40056;69538:39549" name="step-bg" width="16px" height="32px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9f68f485-d267-4ac3-8a91-b46f2fb9c381" image-format="png"/>
+                            <Container id="I330:50418;69584:38665;69580:40056;69538:39541" height="32px" flex-grow="1" background-color="#EBF3FF" />
+                            <Icon id="I330:50418;69584:38665;69580:40056;69538:39542" name="step-bg-end" width="16px" height="32px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/77353945-3c3e-4178-a363-edcf297c9867" image-format="png"/>
+                        </Container>
+                        <Container id="I330:50418;69584:38665;69580:40057" position="absolute" width="178px" height="20px" top="6px" left="16px" display="flex" flex-direction="row" align-items="center" gap="4px">
+                            <Container id="I330:50418;69584:38665;69580:40057;69580:39944" width="20px" height="20px" background-color="#8CB8FF" border-radius="20px">
+                                <Text id="I330:50418;69584:38665;69580:40057;69580:39944;69580:39925" position="absolute" top="0px" left="5px" font-family="PingFang SC" font-size="14px" font-weight="500" color="#FFFFFF">3</Text>
+                            </Container>
+                            <Text id="I330:50418;69584:38665;69580:40057;69538:39498" font-family="PingFang SC" font-size="14px" font-weight="500" color="#252931">第三步：贡献度评估方法</Text>
+                        </Container>
+                    </StepItem>
+                    <!-- Step 4 (Inactive) -->
+                    <StepItem id="I330:50418;69584:38666" width="232.5px" height="32px" display="flex" flex-direction="row" align-items="center" gap="10px" flex-grow="1">
+                        <Container id="I330:50418;69584:38666;69580:40071" display="flex" flex-direction="row" flex-grow="1">
+                            <Icon id="I330:50418;69584:38666;69580:40071;69538:39548" name="step-bg" width="16px" height="32px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/39d8aa40-313d-4b1b-989e-aed1a5f9564c" image-format="png"/>
+                            <Container id="I330:50418;69584:38666;69580:40071;69538:39545" height="32px" flex-grow="1" background-color="#EBF3FF" />
+                            <Icon id="I330:50418;69584:38666;69580:40071;69538:39547" name="step-bg-end" width="16px" height="32px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a383cde7-6361-4b28-a366-8f553672eea8" image-format="png"/>
+                        </Container>
+                        <Container id="I330:50418;69584:38666;69580:40072" position="absolute" width="164px" height="20px" top="6px" left="16px" display="flex" flex-direction="row" align-items="center" gap="4px">
+                            <Container id="I330:50418;69584:38666;69580:40072;69580:39944" width="20px" height="20px" background-color="#8CB8FF" border-radius="20px">
+                                <Text id="I330:50418;69584:38666;69580:40072;69580:39944;69580:39925" position="absolute" top="0px" left="5px" font-family="PingFang SC" font-size="14px" font-weight="500" color="#FFFFFF">4</Text>
+                            </Container>
+                            <Text id="I330:50418;69584:38666;69580:40072;69538:39498" font-family="PingFang SC" font-size="14px" font-weight="500" color="#252931">第四步：诊断结论配置</Text>
+                        </Container>
+                    </StepItem>
+                </Stepper>
+
+                <!-- Metrics Selection Panel -->
+                <Container id="208:81985" display="flex" flex-direction="row" gap="16px" padding="16px" border="1px solid #EEEFF0" border-radius="4px" align-self="stretch">
+                    
+                    <!-- Left Panel: Metrics List -->
+                    <Container id="208:81986" width="583px" display="flex" flex-direction="column" gap="16px" flex-grow="1">
+                        <Text id="208:81987" font-family="PingFang SC" font-size="14px" font-weight="500" color="#252931">选择指标</Text>
+                        
+                        <!-- Search Bar -->
+                        <Input id="208:81988" width="583px" height="32px" background-color="rgba(255, 255, 255, 0.85)" border="1px solid #DCDEE1" border-radius="4px" impl-web="input" impl-behavior="input type('search') placeholder('请输入')">
+                            <Text id="I208:81988;67441:40224" position="absolute" top="8px" left="36px" font-family="PingFang SC" font-size="14px" color="#898B8F">请输入</Text>
+                            <Icon id="I208:81988;67441:40225" name="search" position="absolute" width="16px" height="16px" top="50%" left="12px" transform="translateY(-50%)"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/61644175-b149-4cfe-9c42-0d0daf648935" image-format="png"/>
+                        </Input>
+
+                        <!-- Checkbox Groups -->
+                        <Container id="208:81989" width="583px" height="308px">
+                            <!-- Basic Metrics -->
+                            <Container id="208:81990" position="absolute" width="583px" height="92px" top="0px" left="0px" display="flex" flex-direction="column" gap="16px">
+                                <Container id="208:81991" width="583px" height="20px" display="flex" flex-direction="column" gap="16px" align-self="stretch">
+                                    <Container id="208:81992" width="583px" height="20px" display="flex" flex-direction="row" align-items="center" gap="16px" align-self="stretch">
+                                        <Container id="208:81993" width="56px" display="flex" flex-direction="row" justify-content="flex-end" align-items="center">
+                                            <Text id="I208:81993;10943:109631" font-family="PingFang SC" font-size="14px" color="#898B8F" text-align="right">基础指标</Text>
+                                        </Container>
+                                        <Container id="208:81994" width="511px" height="20px" display="flex" flex-direction="row" gap="32px" flex-grow="1">
+                                            <Checkbox id="208:81995" width="164px" height="20px" display="flex" flex-direction="row" align-items="center" gap="8px" impl-web="checkbox" impl-behavior="checkbox checked(true)">
+                                                <Container id="I208:81995;300:2687" width="16px" height="16px" background-color="#1966FF" border-radius="2px">
+                                                    <Icon id="I208:81995;300:2688" name="check" width="10.49px" height="7.66px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/62a1155f-4351-4eaa-a9d7-948cb365b32f" image-format="png"/>
+                                                </Container>
+                                                <Text id="I208:81995;57322:41618;10943:109622" font-family="PingFang SC" font-size="14px" color="#252931">支付订单数</Text>
+                                            </Checkbox>
+                                            <Checkbox id="208:81996" width="164px" height="20px" display="flex" flex-direction="row" align-items="center" gap="8px" impl-web="checkbox" impl-behavior="checkbox checked(true)">
+                                                <Container id="I208:81996;300:2687" width="16px" height="16px" background-color="#1966FF" border-radius="2px">
+                                                    <Icon id="I208:81996;300:2688" name="check" width="10.49px" height="7.66px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d3bc2880-9ec9-495e-8520-76158a571b41" image-format="png"/>
+                                                </Container>
+                                                <Text id="I208:81996;57322:41618;10943:109622" font-family="PingFang SC" font-size="14px" color="#252931">支付GMV</Text>
+                                            </Checkbox>
+                                        </Container>
+                                    </Container>
+                                </Container>
+                                <!-- More Basic Metrics Rows... -->
+                                <Container id="208:81997" width="583px" height="20px" display="flex" flex-direction="row" align-items="center" gap="32px" padding="0px 0px 0px 72px" align-self="stretch">
+                                    <Checkbox id="208:81998" width="164px" height="20px" display="flex" flex-direction="row" align-items="center" gap="8px" impl-web="checkbox" impl-behavior="checkbox checked(true)">
+                                        <Container id="I208:81998;300:2687" width="16px" height="16px" background-color="#1966FF" border-radius="2px">
+                                            <Icon id="I208:81998;300:2688" name="check" width="10.49px" height="7.66px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e508ef83-03cc-44dc-86ac-542309476eab" image-format="png"/>
+                                        </Container>
+                                        <Text id="I208:81998;57322:41618;10943:109622" font-family="PingFang SC" font-size="14px" color="#252931">用户数</Text>
+                                    </Checkbox>
+                                    <Checkbox id="208:81999" width="66px" height="20px" display="flex" flex-direction="row" align-items="center" gap="8px" impl-web="checkbox" impl-behavior="checkbox checked(true)">
+                                        <Container id="I208:81999;300:2687" width="16px" height="16px" background-color="#1966FF" border-radius="2px">
+                                            <Icon id="I208:81999;300:2688" name="check" width="10.49px" height="7.66px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0c50a0a6-820a-4920-ad08-47882eb9eb6e" image-format="png"/>
+                                        </Container>
+                                        <Text id="I208:81999;57322:41618;10943:109622" font-family="PingFang SC" font-size="14px" color="#252931">复购率</Text>
+                                    </Checkbox>
+                                </Container>
+                                <Container id="208:82000" width="583px" height="20px" display="flex" flex-direction="row" align-items="center" gap="32px" padding="0px 0px 0px 72px" align-self="stretch">
+                                    <Checkbox id="208:82001" width="164px" height="20px" display="flex" flex-direction="row" align-items="center" gap="8px" impl-web="checkbox" impl-behavior="checkbox checked(true)">
+                                        <Container id="I208:82001;300:2687" width="16px" height="16px" background-color="#1966FF" border-radius="2px">
+                                            <Icon id="I208:82001;300:2688" name="check" width="10.49px" height="7.66px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/87a3b202-1bfb-4a8e-9e13-0ad4df86dda8" image-format="png"/>
+                                        </Container>
+                                        <Text id="I208:82001;57322:41618;10943:109622" font-family="PingFang SC" font-size="14px" color="#252931">客单价</Text>
+                                    </Checkbox>
+                                </Container>
+                            </Container>
+                            
+                            <!-- Supply Metrics -->
+                            <Container id="208:82002" position="absolute" width="583px" height="92px" top="108px" left="0px" display="flex" flex-direction="column" gap="16px">
+                                <Container id="208:82003" width="583px" height="20px" display="flex" flex-direction="column" gap="16px" align-self="stretch">
+                                    <Container id="208:82004" width="583px" height="20px" display="flex" flex-direction="row" align-items="center" gap="16px" align-self="stretch">
+                                        <Container id="208:82005" width="56px" display="flex" flex-direction="row" justify-content="flex-end" align-items="center">
+                                            <Text id="I208:82005;10943:109631" font-family="PingFang SC" font-size="14px" color="#898B8F" text-align="right">供给指标</Text>
+                                        </Container>
+                                        <Container id="208:82006" width="511px" height="20px" display="flex" flex-direction="row" gap="32px" flex-grow="1">
+                                            <Checkbox id="208:82007" width="164px" height="20px" display="flex" flex-direction="row" align-items="center" gap="8px" impl-web="checkbox" impl-behavior="checkbox checked(false)">
+                                                <Box id="I208:82007;290:14" width="16px" height="16px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="2px" />
+                                                <Text id="I208:82007;57322:21218;10943:109622" font-family="PingFang SC" font-size="14px" color="#252931">动销商品数</Text>
+                                            </Checkbox>
+                                            <Checkbox id="208:82008" width="164px" height="20px" display="flex" flex-direction="row" align-items="center" gap="8px" impl-web="checkbox" impl-behavior="checkbox checked(false)">
+                                                <Box id="I208:82008;290:14" width="16px" height="16px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="2px" />
+                                                <Text id="I208:82008;57322:21218;10943:109622" font-family="PingFang SC" font-size="14px" color="#252931">商品曝光</Text>
+                                            </Checkbox>
+                                        </Container>
+                                    </Container>
+                                </Container>
+                                <!-- More Supply Metrics... -->
+                            </Container>
+                            
+                            <!-- Traffic Metrics -->
+                            <Container id="208:82015" position="absolute" width="583px" height="92px" top="216px" left="0px" display="flex" flex-direction="column" gap="16px">
+                                <Container id="208:82016" width="583px" height="20px" display="flex" flex-direction="column" gap="16px" align-self="stretch">
+                                    <Container id="208:82017" width="583px" height="20px" display="flex" flex-direction="row" align-items="center" gap="16px" align-self="stretch">
+                                        <Container id="208:82018" width="56px" display="flex" flex-direction="row" justify-content="flex-end" align-items="center">
+                                            <Text id="I208:82018;10943:109631" font-family="PingFang SC" font-size="14px" color="#898B8F" text-align="right">流量指标</Text>
+                                        </Container>
+                                        <Container id="208:82019" width="511px" height="20px" display="flex" flex-direction="row" gap="32px" flex-grow="1">
+                                            <Checkbox id="208:82020" width="164px" height="20px" display="flex" flex-direction="row" align-items="center" gap="8px" impl-web="checkbox" impl-behavior="checkbox checked(false)">
+                                                <Box id="I208:82020;290:14" width="16px" height="16px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="2px" />
+                                                <Text id="I208:82020;57322:21218;10943:109622" font-family="PingFang SC" font-size="14px" color="#252931">曝光PV</Text>
+                                            </Checkbox>
+                                            <Checkbox id="208:82021" width="164px" height="20px" display="flex" flex-direction="row" align-items="center" gap="8px" impl-web="checkbox" impl-behavior="checkbox checked(false)">
+                                                <Box id="I208:82021;290:14" width="16px" height="16px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="2px" />
+                                                <Text id="I208:82021;57322:21218;10943:109622" font-family="PingFang SC" font-size="14px" color="#252931">OPMCTR</Text>
+                                            </Checkbox>
+                                        </Container>
+                                    </Container>
+                                </Container>
+                                <!-- More Traffic Metrics... -->
+                            </Container>
+                        </Container>
+                    </Container>
+
+                    <!-- Divider -->
+                    <Box id="208:82028" width="1px" height="392px" background-color="#EEEFF0" align-self="stretch" />
+
+                    <!-- Right Panel: Selected Metrics -->
+                    <Container id="208:82029" width="264px" height="392px" display="flex" flex-direction="column" gap="8px" align-self="stretch">
+                        <Container id="208:82030" width="264px" height="20px" display="flex" flex-direction="row" justify-content="space-between" align-items="center" gap="8px" align-self="stretch">
+                            <Container id="208:82031" width="83px" height="20px" display="flex" flex-direction="row" gap="4px">
+                                <Text id="208:82032" font-family="PingFang SC" font-size="14px" font-weight="500" color="#252931">已选择指标</Text>
+                                <Text id="208:82033" font-family="PingFang SC" font-size="14px" color="#252931">5</Text>
+                            </Container>
+                            <Text id="208:82034" font-family="PingFang SC" font-size="12px" color="#1966FF" text-align="right" cursor="pointer">重置选择</Text>
+                        </Container>
+                        
+                        <!-- Selected Tags List -->
+                        <Container id="208:82035" width="264px" display="flex" flex-direction="column" gap="8px" flex-grow="1" border-radius="4px">
+                            <Chip id="208:82036" width="104px" height="28px" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="4px" padding="4px 8px 4px 6px" background-color="rgba(0, 0, 0, 0.04)" border="1px solid #EEEFF0" border-radius="2px" impl-behavior="removable">
+                                <Text id="I208:82036;11424:116448" font-family="PingFang SC" font-size="14px" color="#252931" text-align="center">支付订单数</Text>
+                                <Icon id="I208:82036;11424:116449" name="close" width="12px" height="12px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/147c87fb-b0d3-4bd5-97cf-7064dbb2d31f" image-format="png"/>
+                            </Chip>
+                            <Chip id="208:82037" width="94px" height="28px" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="4px" padding="4px 8px 4px 6px" background-color="rgba(0, 0, 0, 0.04)" border="1px solid #EEEFF0" border-radius="2px" impl-behavior="removable">
+                                <Text id="I208:82037;11424:116448" font-family="PingFang SC" font-size="14px" color="#252931" text-align="center">支付GMV</Text>
+                                <Icon id="I208:82037;11424:116449" name="close" width="12px" height="12px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d87dde01-59d8-43b4-9c52-ace2e33ef770" image-format="png"/>
+                            </Chip>
+                            <Chip id="208:82038" width="76px" height="28px" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="4px" padding="4px 8px 4px 6px" background-color="rgba(0, 0, 0, 0.04)" border="1px solid #EEEFF0" border-radius="2px" impl-behavior="removable">
+                                <Text id="I208:82038;11424:116448" font-family="PingFang SC" font-size="14px" color="#252931" text-align="center">用户数</Text>
+                                <Icon id="I208:82038;11424:116449" name="close" width="12px" height="12px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/27f9e26a-024a-406d-977a-59b20a3f8248" image-format="png"/>
+                            </Chip>
+                            <Chip id="208:82039" width="76px" height="28px" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="4px" padding="4px 8px 4px 6px" background-color="rgba(0, 0, 0, 0.04)" border="1px solid #EEEFF0" border-radius="2px" impl-behavior="removable">
+                                <Text id="I208:82039;11424:116448" font-family="PingFang SC" font-size="14px" color="#252931" text-align="center">复购率</Text>
+                                <Icon id="I208:82039;11424:116449" name="close" width="12px" height="12px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1327c407-770f-4cf5-8f84-bc637f9b0865" image-format="png"/>
+                            </Chip>
+                            <Chip id="208:82040" width="76px" height="28px" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="4px" padding="4px 8px 4px 6px" background-color="rgba(0, 0, 0, 0.04)" border="1px solid #EEEFF0" border-radius="2px" impl-behavior="removable">
+                                <Text id="I208:82040;11424:116448" font-family="PingFang SC" font-size="14px" color="#252931" text-align="center">客单价</Text>
+                                <Icon id="I208:82040;11424:116449" name="close" width="12px" height="12px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/196dde61-7e10-41ee-a39b-270e7907bc77" image-format="png"/>
+                            </Chip>
+                        </Container>
+                    </Container>
+                </Container>
+            </Section>
+        </ScrollView>
+
+        <!-- Footer -->
+        <Footer id="208:82045" height="65px" display="flex" flex-direction="column" align-items="flex-end" align-self="stretch" impl-role="footer">
+            <Divider id="208:82046" width="100%" height="1px" background-color="#EDEFF2" />
+            <Container id="208:82047" height="64px" display="flex" flex-direction="column" justify-content="center" align-items="flex-end" gap="16px" padding="16px 24px 16px 0px" align-self="stretch" background-color="#FFFFFF">
+                <Container id="208:82048" width="156px" height="32px" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" gap="8px">
+                    <Button id="208:82049" width="74px" height="32px" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="10px" padding="6px 16px" background-color="#1966FF" border-radius="4px" impl-role="button">
+                        <Text id="I208:82049;2:1328" font-family="PingFang SC" font-size="14px" color="#FFFFFF" text-align="center">确定</Text>
+                    </Button>
+                    <Button id="208:82050" width="74px" height="32px" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="10px" padding="6px 16px" border="1px solid #DCDDE0" border-radius="4px" impl-role="button">
+                        <Text id="I208:82050;1149:5264" font-family="PingFang SC" font-size="14px" color="#252931" text-align="center">取消</Text>
+                    </Button>
+                </Container>
+            </Container>
+        </Footer>
+    </Screen>
+</MainUI>
+<Emphasis>Focus on the MainUI section's XML structure, which contains the page UI information for code generation. Pay attention to component-use attributes and prioritize using these recommended components during code implementation.</Emphasis>

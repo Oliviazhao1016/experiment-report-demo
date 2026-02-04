@@ -1,0 +1,151 @@
+<!-- D2C Generated XML - Figma URL: https://www.figma.com/design/zNQUjHBcxxtV8Tp2ve0oWq/%E8%B4%A7%E7%9B%98%E5%A4%8D%E7%9B%98-%E8%AE%BE%E8%AE%A1%E7%A8%BF?node-id=135-40213&t=11zPCtNKEqPsNT4n-4 -->
+<!-- Generated at: 2026-02-04T02:56:47.672Z -->
+<!-- 🗑️ This is a temporary file, please delete after code generation -->
+
+<MainUI pv="v251222-01.universal.en" xml-id="368b2c14a62ca881">
+    <Screen id="135:40213" codegen-summary="Data filter panel with multiple select inputs, radio group for quadrant division, and a query button">
+        <Section id="135:40213" display="flex" flex-direction="column" justify-content="center" gap="16px" padding="8px" background-color="#F8F9FA" border-radius="4px">
+            
+            <!-- Row 1: Filter Inputs -->
+            <Container id="135:40214" display="flex" flex-direction="row" align-items="center" gap="24px">
+                
+                <!-- Filter 1: Analysis -->
+                <Container id="285:134818" display="flex" flex-direction="row" gap="16px">
+                    <Container id="285:134819" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" height="32px">
+                        <Text id="I285:134819;10943:109622" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#898B8F" text-align="right" white-space="nowrap">分析货盘</Text>
+                    </Container>
+                    <Container id="285:134820" width="240px" display="flex" flex-direction="column" justify-content="center" gap="4px">
+                        <!-- Select Input -->
+                        <Container id="285:134821" height="32px" display="flex" flex-direction="row" align-items="center" justify-content="space-between" padding="0px 12px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="4px" impl-role="input" impl-behavior="select">
+                            <Text id="I285:134821;59149:19022;348:6" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#252931" white-space="nowrap">已筛选货盘</Text>
+                            <Icon id="I285:134821;59149:19023" name="chevron-down" width="16px" height="16px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/908a0c0b-d025-4f38-88c9-d4fa32f4195c" image-format="png"/>
+                        </Container>
+                    </Container>
+                </Container>
+
+                <!-- Filter 2: Dimension -->
+                <Container id="135:40220" display="flex" flex-direction="row" gap="16px">
+                    <Container id="135:40221" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" height="32px">
+                        <Text id="I135:40221;10943:109622" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#898B8F" text-align="right" white-space="nowrap">分布维度</Text>
+                    </Container>
+                    <Container id="135:40222" width="120px" display="flex" flex-direction="column" justify-content="center" gap="4px">
+                        <Container id="135:40223" height="32px" display="flex" flex-direction="row" align-items="center" justify-content="space-between" padding="0px 12px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="4px" impl-role="input" impl-behavior="select">
+                            <Text id="I135:40223;59149:19022;348:6" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#252931" white-space="nowrap">一级子赛道</Text>
+                            <Icon id="I135:40223;59149:19023" name="chevron-down" width="16px" height="16px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/cf8145f2-f58e-4d8f-b634-4be4f9d8cc4f" image-format="png"/>
+                        </Container>
+                    </Container>
+                </Container>
+
+                <!-- Filter 3: X Axis -->
+                <Container id="135:40225" display="flex" flex-direction="row" gap="16px">
+                    <Container id="135:40226" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" height="32px">
+                        <Text id="I135:40226;10943:109622" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#898B8F" text-align="right" white-space="nowrap">X轴</Text>
+                    </Container>
+                    <Container id="135:40227" display="flex" flex-direction="column" justify-content="center" gap="4px">
+                        <Container id="135:40228" display="flex" flex-direction="row" align-items="center" gap="8px">
+                            <Container id="135:40229" width="120px" height="32px" display="flex" flex-direction="row" align-items="center" justify-content="space-between" padding="0px 12px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="4px" impl-role="input" impl-behavior="select">
+                                <Text id="I135:40229;59149:19022;348:6" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#252931" white-space="nowrap">支付订单数</Text>
+                                <Icon id="I135:40229;59149:19023" name="chevron-down" width="16px" height="16px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/be202b0a-7660-4ba4-8195-b0eef4e341cf" image-format="png"/>
+                            </Container>
+                            <Container id="135:40230" width="120px" height="32px" display="flex" flex-direction="row" align-items="center" justify-content="space-between" padding="0px 12px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="4px" impl-role="input" impl-behavior="select">
+                                <Text id="I135:40230;59149:19022;348:6" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#252931" white-space="nowrap">增量</Text>
+                                <Icon id="I135:40230;59149:19023" name="chevron-down" width="16px" height="16px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4226273b-0ae4-41c4-a8e9-27b8612f76b8" image-format="png"/>
+                            </Container>
+                        </Container>
+                    </Container>
+                </Container>
+
+                <!-- Filter 4: Y Axis -->
+                <Container id="135:40233" display="flex" flex-direction="row" gap="16px">
+                    <Container id="135:40234" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" height="32px">
+                        <Text id="I135:40234;10943:109622" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#898B8F" text-align="right" white-space="nowrap">Y轴</Text>
+                    </Container>
+                    <Container id="135:40235" display="flex" flex-direction="column" justify-content="center" gap="4px">
+                        <Container id="135:40236" display="flex" flex-direction="row" align-items="center" gap="8px">
+                            <Container id="135:40237" width="120px" height="32px" display="flex" flex-direction="row" align-items="center" justify-content="space-between" padding="0px 12px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="4px" impl-role="input" impl-behavior="select">
+                                <Text id="I135:40237;59149:19022;348:6" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#252931" white-space="nowrap">支付订单数</Text>
+                                <Icon id="I135:40237;59149:19023" name="chevron-down" width="16px" height="16px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0fd1b31a-ff2a-4571-ad55-11d941c24fea" image-format="png"/>
+                            </Container>
+                            <Container id="135:40238" width="120px" height="32px" display="flex" flex-direction="row" align-items="center" justify-content="space-between" padding="0px 12px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="4px" impl-role="input" impl-behavior="select">
+                                <Text id="I135:40238;59149:19022;348:6" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#252931" white-space="nowrap">增量</Text>
+                                <Icon id="I135:40238;59149:19023" name="chevron-down" width="16px" height="16px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/033079d9-ad4c-418e-82d1-fa23d0133ba3" image-format="png"/>
+                            </Container>
+                        </Container>
+                    </Container>
+                </Container>
+            </Container>
+
+            <!-- Row 2: Bubble Size, Quadrant, Query -->
+            <Container id="135:40262" display="flex" flex-direction="row" align-items="center" gap="24px">
+                
+                <!-- Filter 5: Bubble Size -->
+                <Container id="135:40263" display="flex" flex-direction="row" gap="16px">
+                    <Container id="135:40264" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" height="32px">
+                        <Text id="I135:40264;10943:109622" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#898B8F" text-align="right" white-space="nowrap">气泡大小</Text>
+                    </Container>
+                    <Container id="135:40265" width="120px" display="flex" flex-direction="column" justify-content="center" gap="4px">
+                        <Container id="135:40266" height="32px" display="flex" flex-direction="row" align-items="center" justify-content="space-between" padding="0px 12px" background-color="#FFFFFF" border="1px solid #DCDEE1" border-radius="4px" impl-role="input" impl-behavior="select">
+                            <Text id="I135:40266;59149:19022;348:6" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#252931" white-space="nowrap">动销商品数</Text>
+                            <Icon id="I135:40266;59149:19023" name="chevron-down" width="16px" height="16px"  download-url="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/46edf72d-7f45-4dae-9c78-ddf7ab8fc353" image-format="png"/>
+                        </Container>
+                    </Container>
+                </Container>
+
+                <!-- Filter 6: Quadrant Division (Radio Group) -->
+                <Container id="135:40268" display="flex" flex-direction="row" gap="16px">
+                    <Container id="135:40269" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" height="32px">
+                        <Text id="I135:40269;10943:109622" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#898B8F" text-align="right" white-space="nowrap">象限划分</Text>
+                    </Container>
+                    <Container id="135:40270" display="flex" flex-direction="column" justify-content="center" gap="4px" align-self="stretch">
+                        <Container id="135:40271" display="flex" flex-direction="row" align-items="center" gap="16px" impl-role="radiogroup">
+                            
+                            <!-- Radio 1: Mean (Selected) -->
+                            <Container id="I135:40271;57322:60184" display="flex" flex-direction="row" align-items="center" gap="2px" impl-role="radio" impl-behavior="checked">
+                                <Container id="I135:40271;57322:60184;28399:219491;2111:34348" width="16px" height="16px" border-radius="20px" background-color="#FFFFFF" border="1px solid #1966FF" display="flex" align-items="center" justify-content="center">
+                                    <Box id="I135:40271;57322:60184;28399:219491;904:10109" width="8px" height="8px" background-color="#1966FF" border-radius="50%" />
+                                </Container>
+                                <Container id="I135:40271;57322:60184;28399:219491;57322:50922" display="flex" flex-direction="row" justify-content="flex-end" align-items="center">
+                                    <Text id="I135:40271;57322:60184;28399:219491;57322:50922;10943:109622" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#252931" white-space="nowrap">均值</Text>
+                                </Container>
+                            </Container>
+
+                            <!-- Radio 2: Median -->
+                            <Container id="I135:40271;57322:60185" display="flex" flex-direction="row" align-items="center" gap="2px" impl-role="radio">
+                                <Container id="I135:40271;57322:60185;28399:219537;2111:34348" width="16px" height="16px" border-radius="20px" background-color="#FFFFFF" border="1px solid #DCDEE1" />
+                                <Container id="I135:40271;57322:60185;28399:219537;57322:50922" display="flex" flex-direction="row" justify-content="flex-end" align-items="center">
+                                    <Text id="I135:40271;57322:60185;28399:219537;57322:50922;10943:109622" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#252931" white-space="nowrap">中位数</Text>
+                                </Container>
+                            </Container>
+
+                            <!-- Radio 3: TOP 10 -->
+                            <Container id="I135:40271;57322:60186" display="flex" flex-direction="row" align-items="center" gap="2px" impl-role="radio">
+                                <Container id="I135:40271;57322:60186;28399:219537;2111:34348" width="16px" height="16px" border-radius="20px" background-color="#FFFFFF" border="1px solid #DCDEE1" />
+                                <Container id="I135:40271;57322:60186;28399:219537;57322:50922" display="flex" flex-direction="row" justify-content="flex-end" align-items="center">
+                                    <Text id="I135:40271;57322:60186;28399:219537;57322:50922;10943:109622" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#252931" white-space="nowrap">TOP 10分位</Text>
+                                </Container>
+                            </Container>
+
+                            <!-- Radio 4: TOP 20 -->
+                            <Container id="I135:40271;57322:60187" display="flex" flex-direction="row" align-items="center" gap="2px" impl-role="radio">
+                                <Container id="I135:40271;57322:60187;28399:219537;2111:34348" width="16px" height="16px" border-radius="20px" background-color="#FFFFFF" border="1px solid #DCDEE1" />
+                                <Container id="I135:40271;57322:60187;28399:219537;57322:50922" display="flex" flex-direction="row" justify-content="flex-end" align-items="center" gap="2px">
+                                    <Text id="I135:40271;57322:60187;28399:219537;57322:50922;10943:109638" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#252931" white-space="nowrap">TOP 20分位</Text>
+                                </Container>
+                            </Container>
+
+                        </Container>
+                    </Container>
+                </Container>
+
+                <!-- Query Button -->
+                <Button id="1499:45374" display="flex" flex-direction="row" justify-content="center" align-items="center" gap="2px" padding="6px 16px" background-color="#FFFFFF" border="1px solid #1966FF" border-radius="4px" impl-role="button">
+                    <Container id="I1499:45374;69:1219" display="flex" flex-direction="column" align-items="center">
+                        <Text id="I1499:45374;69:1221" font-family="PingFang SC" font-size="14px" font-weight="400" line-height="1.43em" color="#1966FF" text-align="center" white-space="nowrap">查询</Text>
+                    </Container>
+                </Button>
+
+            </Container>
+        </Section>
+    </Screen>
+</MainUI>
+<Emphasis>Focus on the MainUI section's XML structure, which contains the page UI information for code generation. Pay attention to component-use attributes and prioritize using these recommended components during code implementation.</Emphasis>

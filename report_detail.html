@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【超值购】专项 - 复盘报告详情</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+
+    <!-- Top Navigation (Simplified) -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-item" style="color:var(--text-primary); text-decoration:none;">&lt; 返回列表</a>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="flex justify-between items-center">
+            <div class="page-title">
+                【超值购】专项复盘报告
+                <span class="status-badge status-success" style="font-size:12px; margin-left:12px;">已完成</span>
+            </div>
+            <div>
+                <button class="btn btn-secondary">导出报告</button>
+                <button class="btn btn-primary ml-2">分享</button>
+            </div>
+        </div>
+        
+        <div class="flex gap-8 mt-4 mb-4 text-secondary text-sm">
+            <div><span class="font-medium text-primary">6</span> 个实验</div>
+            <div><span class="font-medium text-primary">2025/02/01 - 02/08</span> 分析周期</div>
+            <div>负责人：赵欣蕊</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="content">
+        
+        <!-- 1. Data Table Section -->
+        <div class="mb-8">
+            <h3 class="text-base font-medium mb-4">实验数据明细</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>实验名称</th>
+                        <th>策略方向</th>
+                        <th>主访LT增量</th>
+                        <th>GMV增量</th>
+                        <th>消耗预算</th>
+                        <th>ROI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>新入口样式优化实验_V3</td>
+                        <td>UI交互</td>
+                        <td class="text-right">+1,203</td>
+                        <td class="text-right">¥45,000</td>
+                        <td class="text-right">¥2,000</td>
+                        <td class="text-right">22.5</td>
+                    </tr>
+                    <tr>
+                        <td>猜你喜欢算法模型迭代_B2</td>
+                        <td>推荐策略</td>
+                        <td class="text-right">+850</td>
+                        <td class="text-right">¥120,000</td>
+                        <td class="text-right">¥15,000</td>
+                        <td class="text-right">8.0</td>
+                    </tr>
+                    <tr>
+                        <td>首页Banner坑位调整</td>
+                        <td>资源位</td>
+                        <td class="text-right">-120</td>
+                        <td class="text-right">¥5,000</td>
+                        <td class="text-right">¥0</td>
+                        <td class="text-right">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 2. Bubble Chart Section -->
+        <div>
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-base font-medium">策略矩阵分析 (气泡图)</h3>
+            </div>
+            
+            <div class="chart-container" style="height: auto;">
+                
+                <!-- Controls -->
+                <div class="chart-controls">
+                    <!-- Row 1: Filters -->
+                    <div class="control-row">
+                        <div class="control-label w-16">筛选条件:</div>
+                        <div id="filter-container" class="flex flex-col gap-2 flex-1">
+                            <!-- Dynamic filters here -->
+                        </div>
+                        <button id="add-filter-btn" class="btn btn-secondary text-xs">+ 添加条件</button>
+                    </div>
+
+                    <!-- Row 2: Metrics -->
+                    <div class="control-row">
+                        <div class="control-label w-16">坐标配置:</div>
+                        <div class="flex gap-4">
+                            <div class="select-wrapper">
+                                <span class="text-xs mr-2 text-secondary">X轴</span>
+                                <select id="x-axis-metric" class="input" style="width: 140px;"></select>
+                            </div>
+                            <div class="select-wrapper">
+                                <span class="text-xs mr-2 text-secondary">Y轴</span>
+                                <select id="y-axis-metric" class="input" style="width: 140px;"></select>
+                            </div>
+                            <div class="select-wrapper">
+                                <span class="text-xs mr-2 text-secondary">大小</span>
+                                <select id="size-metric" class="input" style="width: 140px;"></select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Quadrant & Query -->
+                    <div class="control-row justify-between">
+                        <div class="flex gap-4 items-center">
+                            <div class="control-label w-16">象限划分:</div>
+                            <label class="flex items-center gap-1 text-sm"><input type="radio" name="quadrant" value="mean" checked> 均值</label>
+                            <label class="flex items-center gap-1 text-sm"><input type="radio" name="quadrant" value="median"> 中位数</label>
+                            <label class="flex items-center gap-1 text-sm"><input type="radio" name="quadrant" value="top10"> Top 10%</label>
+                            <label class="flex items-center gap-1 text-sm"><input type="radio" name="quadrant" value="top20"> Top 20%</label>
+                        </div>
+                        <button id="query-btn" class="btn btn-primary">刷新图表</button>
+                    </div>
+                </div>
+
+                <!-- Chart -->
+                <div id="bubble-chart" style="width: 100%; height: 500px;"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="assets/js/detail_script.js"></script>
+</body>
+</html>
