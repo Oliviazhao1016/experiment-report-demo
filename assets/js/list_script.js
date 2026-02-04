@@ -165,7 +165,50 @@ function removeFilterValue(filterIndex, value, event) {
     renderReportFilters();
 }
 
-// Modal Logic
+// Metric Selector Logic
+const metricsData = {
+    'IES-电商抖音商城转化指标组': [
+        '新增入口-主访有行为UV',
+        '新增入口-主访有行为渗透率'
+    ],
+    'IES-超值购频道多维指标组': [
+        '人均新入口商城频道30秒主访天数（商城有行为主访口径）',
+        '人均支付订单金额'
+    ]
+};
+
+function initMetricSelector() {
+    const groupItems = document.querySelectorAll('.metric-group-item');
+    const metricList = document.querySelector('.metric-list');
+    
+    groupItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Update active state
+            groupItems.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+            
+            // Render metrics
+            const groupName = item.innerText.split(' (')[0].trim();
+            const metrics = metricsData[groupName] || [];
+            
+            // Keep search bar
+            const searchBar = metricList.querySelector('.input');
+            metricList.innerHTML = '';
+            metricList.appendChild(searchBar);
+            
+            metrics.forEach(metric => {
+                const div = document.createElement('div');
+                div.className = 'metric-checkbox';
+                div.innerHTML = `<input type="checkbox" checked> ${metric}`;
+                metricList.appendChild(div);
+            });
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initMetricSelector();
+});
 function openNewReportModal() {
     const modalOverlay = document.getElementById('newReportModal');
     modalOverlay.classList.add('open');
@@ -203,6 +246,51 @@ function saveDrawer() {
 }
 
 // Bulk Edit Logic
+const bulkOptions = {
+    direction: ['LT促转券', '充值金策略', '充值基线补贴', '订单报销', '货补', '金币-极速版', '天天抽券', '投放', '引流', '异形卡引流', '转化', '主端站内引流'],
+    dept: ['超值购', '充值中心', '秒杀', '商城'],
+    bool: ['是', '否']
+};
+
+function updateBulkValueOptions() {
+    const typeSelect = document.getElementById('bulk-type-select');
+    const valueSelect = document.getElementById('bulk-value-select');
+    const type = typeSelect.value;
+    
+    valueSelect.innerHTML = '<option value="" disabled selected>选择内容</option>';
+    
+    if (type && bulkOptions[type]) {
+        bulkOptions[type].forEach(opt => {
+            const option = document.createElement('option');
+            option.value = opt;
+            option.textContent = opt;
+            valueSelect.appendChild(option);
+        });
+        valueSelect.disabled = false;
+    } else {
+        valueSelect.disabled = true;
+    }
+}
+
+function applyBulkEditFromTop() {
+    const type = document.getElementById('bulk-type-select').value;
+    const value = document.getElementById('bulk-value-select').value;
+    
+    if (!type || !value) {
+        alert('请先选择属性和内容');
+        return;
+    }
+
+    const checkboxes = document.querySelectorAll('.row-checkbox:checked');
+    if (checkboxes.length === 0) return;
+
+    checkboxes.forEach(cb => {
+        const row = cb.closest('tr');
+        const cellIndex = type === 'direction' ? 2 : type === 'dept' ? 3 : 4;
+        row.cells[cellIndex].innerText = value;
+    });
+}
+
 function updateSelectionStatus() {
     const checkboxes = document.querySelectorAll('.row-checkbox');
     const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
@@ -222,27 +310,10 @@ function toggleAll(source) {
     updateSelectionStatus();
 }
 
-function applyBulkEdit(type) {
-    const checkboxes = document.querySelectorAll('.row-checkbox:checked');
-    if (checkboxes.length === 0) return;
+// Removed deprecated applyBulkEdit function
+// function applyBulkEdit(type) { ... }
 
-    let value = '';
-    if (type === 'direction') value = prompt('请输入策略方向 (如: UI交互, 推荐策略):', 'UI交互');
-    if (type === 'dept') value = prompt('请输入二级部门:', '商城产品部');
-    if (type === 'bool') value = prompt('是否可推全 (是/否):', '是');
-
-    if (value) {
-        checkboxes.forEach(cb => {
-            const row = cb.closest('tr');
-            const cellIndex = type === 'direction' ? 2 : type === 'dept' ? 3 : 4;
-            const cell = row.cells[cellIndex].querySelector('.editable-cell');
-            cell.innerText = value;
-            cell.className = 'editable-cell';
-        });
-    }
-}
-
-// Inline Edit Logic
+// Inline Edit Logic - Removed as requested
 function editCell(element, type) {
     if (element.querySelector('select') || element.querySelector('input')) return;
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【超值购】专项 - 复盘报告详情</title>
+    <title>商城整体 - 复盘报告详情</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
 </head>
@@ -18,7 +18,7 @@
     <header class="page-header">
         <div class="flex justify-between items-center">
             <div class="page-title">
-                【超值购】专项复盘报告
+                商城整体复盘报告
                 <span class="status-badge status-success" style="font-size:12px; margin-left:12px;">已完成</span>
             </div>
             <div>
@@ -86,53 +86,77 @@
                 <h3 class="text-base font-medium">策略矩阵分析 (气泡图)</h3>
             </div>
             
-            <div class="chart-container" style="height: auto;">
-                
-                <!-- Controls -->
-                <div class="chart-controls">
-                    <!-- Row 1: Filters -->
-                    <div class="control-row">
-                        <div class="control-label w-16">筛选条件:</div>
-                        <div id="filter-container" class="flex flex-col gap-2 flex-1">
-                            <!-- Dynamic filters here -->
-                        </div>
-                        <button id="add-filter-btn" class="btn btn-secondary text-xs">+ 添加条件</button>
-                    </div>
-
-                    <!-- Row 2: Metrics -->
-                    <div class="control-row">
-                        <div class="control-label w-16">坐标配置:</div>
-                        <div class="flex gap-4">
-                            <div class="select-wrapper">
-                                <span class="text-xs mr-2 text-secondary">X轴</span>
-                                <select id="x-axis-metric" class="input" style="width: 140px;"></select>
+            <header class="control-panel">
+                <!-- Row 1: 筛选条件 -->
+                <div class="control-group" style="align-items: flex-start;">
+                    <div class="filter-item long-label">
+                        <label style="margin-top: 8px;">筛选条件</label>
+                        <div class="filter-wrapper">
+                            <div id="filter-container">
+                                <!-- 动态筛选行将插入这里 -->
                             </div>
-                            <div class="select-wrapper">
-                                <span class="text-xs mr-2 text-secondary">Y轴</span>
-                                <select id="y-axis-metric" class="input" style="width: 140px;"></select>
-                            </div>
-                            <div class="select-wrapper">
-                                <span class="text-xs mr-2 text-secondary">大小</span>
-                                <select id="size-metric" class="input" style="width: 140px;"></select>
-                            </div>
+                            <button id="add-filter-btn" class="add-filter-btn">+ 添加筛选条件</button>
                         </div>
-                    </div>
-
-                    <!-- Row 3: Quadrant & Query -->
-                    <div class="control-row justify-between">
-                        <div class="flex gap-4 items-center">
-                            <div class="control-label w-16">象限划分:</div>
-                            <label class="flex items-center gap-1 text-sm"><input type="radio" name="quadrant" value="mean" checked> 均值</label>
-                            <label class="flex items-center gap-1 text-sm"><input type="radio" name="quadrant" value="median"> 中位数</label>
-                            <label class="flex items-center gap-1 text-sm"><input type="radio" name="quadrant" value="top10"> Top 10%</label>
-                            <label class="flex items-center gap-1 text-sm"><input type="radio" name="quadrant" value="top20"> Top 20%</label>
-                        </div>
-                        <button id="query-btn" class="btn btn-primary">刷新图表</button>
                     </div>
                 </div>
 
+                <!-- Row 2: 指标配置 (X轴、Y轴、气泡大小) -->
+                <div class="control-group">
+                    <!-- X 轴 -->
+                    <div class="filter-item long-label">
+                        <label>X轴</label>
+                        <select id="x-axis-metric"></select>
+                        <!-- 模拟设计稿的双 Select -->
+                        <select disabled style="width: 80px; background-color: #f5f5f5; color: #999;">
+                            <option>增量</option>
+                        </select>
+                    </div>
+
+                    <!-- Y 轴 -->
+                    <div class="filter-item long-label">
+                        <label>Y轴</label>
+                        <select id="y-axis-metric"></select>
+                        <select disabled style="width: 80px; background-color: #f5f5f5; color: #999;">
+                            <option>增量</option>
+                        </select>
+                    </div>
+
+                    <!-- 气泡大小 -->
+                    <div class="filter-item long-label">
+                        <label>气泡大小</label>
+                        <select id="size-metric"></select>
+                    </div>
+                </div>
+
+                <!-- Row 3: 象限划分 & 查询 -->
+                <div class="control-group">
+                    <!-- 象限划分 -->
+                    <div class="filter-item long-label">
+                        <label>象限划分</label>
+                        <div class="radio-group">
+                            <label class="radio-item">
+                                <input type="radio" name="quadrant" value="mean" checked> 均值
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="quadrant" value="median"> 中位数
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="quadrant" value="top10"> TOP 10分位
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="quadrant" value="top20"> TOP 20分位
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 查询按钮 (推到最右边) -->
+                    <button class="query-btn" id="query-btn">查询</button>
+                </div>
+            </header>
+
+            <div class="chart-container" style="height: auto;">
                 <!-- Chart -->
-                <div id="bubble-chart" style="width: 100%; height: 500px;"></div>
+                <div id="bubble-chart"></div>
             </div>
         </div>
 

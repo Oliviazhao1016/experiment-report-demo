@@ -49,9 +49,7 @@
         </div>
 
         <div class="page-tabs">
-            <div class="page-tab active">业务专项复盘报告</div>
-            <div class="page-tab">策略复盘报告</div>
-            <div class="page-tab">自定义复盘报告</div>
+            <div class="page-tab active">专项复盘报告</div>
         </div>
     </header>
 
@@ -90,7 +88,6 @@
         <table class="data-table">
             <thead>
                 <tr>
-                    <th style="width: 40px;"></th>
                     <th>报告名称</th>
                     <th>策略归属</th>
                     <th>创建人</th>
@@ -99,9 +96,8 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="text-center"><img src="assets/icons/chevron-down-sm.png" width="10"></td>
                     <td>
-                        <div style="font-weight: 500;">【超值购】专项</div>
+                        <div style="font-weight: 500;">商城整体</div>
                         <div class="text-secondary text-xs mt-1">ID: 26</div>
                     </td>
                     <td>6个策略</td>
@@ -114,14 +110,15 @@
                     <td>
                         <a href="report_detail.html" class="btn-link">复盘报告</a>
                         <button class="btn-link">设置</button>
-                        <button class="btn-link" onclick="openDrawer('【超值购】专项')">策略管理</button>
-                        <span class="status-badge status-warning">3个待打标</span>
+                        <button class="btn-link" onclick="openDrawer('商城整体')">
+                            策略管理
+                            <span class="status-dot"></span>
+                        </button>
                     </td>
                 </tr>
                 <tr>
-                    <td class="text-center"><img src="assets/icons/chevron-down-sm.png" width="10"></td>
                     <td>
-                        <div style="font-weight: 500;">纸尿裤品类机会</div>
+                        <div style="font-weight: 500;">超值购专项</div>
                         <div class="text-secondary text-xs mt-1">ID: 25</div>
                     </td>
                     <td>0个策略</td>
@@ -134,12 +131,14 @@
                     <td>
                         <a href="report_detail.html" class="btn-link">复盘报告</a>
                         <button class="btn-link">设置</button>
+                        <button class="btn-link" onclick="openDrawer('超值购专项')">
+                            策略管理
+                        </button>
                     </td>
                 </tr>
                 <tr>
-                    <td class="text-center"><img src="assets/icons/chevron-down-sm.png" width="10"></td>
                     <td>
-                        <div style="font-weight: 500;">专项1</div>
+                        <div style="font-weight: 500;">引流方向</div>
                         <div class="text-secondary text-xs mt-1">ID: 24</div>
                     </td>
                     <td>2个策略</td>
@@ -152,6 +151,9 @@
                     <td>
                         <a href="report_detail.html" class="btn-link">复盘报告</a>
                         <button class="btn-link">设置</button>
+                        <button class="btn-link" onclick="openDrawer('引流方向')">
+                            策略管理
+                        </button>
                     </td>
                 </tr>
             </tbody>
@@ -195,20 +197,10 @@
                     <div class="metric-selector">
                         <div class="metric-groups">
                             <div class="metric-group-item active">
-                                业务专项&策略覆盖指标 (4/4)
-                                <img src="assets/icons/chevron-down.png" width="10">
+                                IES-电商抖音商城转化指标组 (2/2)
                             </div>
                             <div class="metric-group-item">
-                                大盘指标 (27/27)
-                                <img src="assets/icons/chevron-down.png" width="10">
-                            </div>
-                            <div class="metric-group-item">
-                                达标指标 (27/27)
-                                <img src="assets/icons/chevron-down.png" width="10">
-                            </div>
-                            <div class="metric-group-item">
-                                气泡图指标 (8/8)
-                                <img src="assets/icons/chevron-down.png" width="10">
+                                IES-超值购频道多维指标组 (2/2)
                             </div>
                         </div>
                         <div class="metric-list">
@@ -217,16 +209,10 @@
                                 <input type="text" placeholder="搜索指标名称..." style="border:none; outline:none; width:100%;">
                             </div>
                             <div class="metric-checkbox">
-                                <input type="checkbox" checked> 覆盖商品数
+                                <input type="checkbox" checked> 新增入口-主访有行为UV
                             </div>
                             <div class="metric-checkbox">
-                                <input type="checkbox" checked> 覆盖商品曝光PV
-                            </div>
-                            <div class="metric-checkbox">
-                                <input type="checkbox" checked> 覆盖商品订单数
-                            </div>
-                            <div class="metric-checkbox">
-                                <input type="checkbox" checked> 覆盖商品GMV
+                                <input type="checkbox" checked> 新增入口-主访有行为渗透率
                             </div>
                         </div>
                     </div>
@@ -247,6 +233,25 @@
             <button class="btn-link" onclick="closeDrawer()"><img src="assets/icons/close.png" width="14"></button>
         </div>
         <div class="drawer-body">
+            <!-- Bulk Actions (Moved to Top) -->
+            <div id="bulk-actions" class="hidden flex gap-2 w-full p-4 bg-gray-50 border-b border-gray-200 items-center mb-4">
+                <span class="text-sm font-medium">批量设置:</span>
+                <div class="select-wrapper w-32">
+                    <select id="bulk-type-select" class="input w-full" onchange="updateBulkValueOptions()">
+                        <option value="" disabled selected>选择属性</option>
+                        <option value="direction">策略方向</option>
+                        <option value="dept">二级部门</option>
+                        <option value="bool">是否推全</option>
+                    </select>
+                </div>
+                <div class="select-wrapper w-48">
+                    <select id="bulk-value-select" class="input w-full" disabled>
+                        <option value="" disabled selected>选择内容</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary text-xs h-8 px-4" onclick="applyBulkEditFromTop()">应用</button>
+            </div>
+
             <div style="margin-bottom: 16px; font-size: 13px; color: #666; background: #e6f7ff; padding: 12px; border: 1px solid #91d5ff; border-radius: 4px;">
                 <span style="margin-right: 8px;">ℹ️</span>
                 请完善以下策略的业务属性，以便生成更准确的归因分析报告。
@@ -266,41 +271,21 @@
                     <tr>
                         <td><input type="checkbox" class="row-checkbox" onclick="updateSelectionStatus()"></td>
                         <td>新入口样式优化实验_V3</td>
-                        <td>
-                            <div class="editable-cell" onclick="editCell(this, 'direction')">UI交互</div>
-                        </td>
-                        <td>
-                            <div class="editable-cell" onclick="editCell(this, 'dept')">商城产品部</div>
-                        </td>
-                        <td>
-                            <div class="editable-cell" onclick="editCell(this, 'bool')">是</div>
-                        </td>
+                        <td>UI交互</td>
+                        <td>商城产品部</td>
+                        <td>是</td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="row-checkbox" onclick="updateSelectionStatus()"></td>
                         <td>猜你喜欢算法模型迭代_B2</td>
-                        <td>
-                            <div class="editable-cell empty" onclick="editCell(this, 'direction')">点击选择</div>
-                        </td>
-                        <td>
-                            <div class="editable-cell" onclick="editCell(this, 'dept')">推荐算法部</div>
-                        </td>
-                        <td>
-                            <div class="editable-cell empty" onclick="editCell(this, 'bool')">点击选择</div>
-                        </td>
+                        <td></td>
+                        <td>推荐算法部</td>
+                        <td></td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="drawer-footer flex-col gap-4">
-            <!-- Bulk Actions (Hidden by default) -->
-            <div id="bulk-actions" class="hidden flex gap-2 w-full p-2 bg-gray-100 rounded items-center">
-                <span class="text-xs font-medium">批量设置:</span>
-                <button class="btn btn-secondary text-xs h-6 px-2" onclick="applyBulkEdit('direction')">策略方向</button>
-                <button class="btn btn-secondary text-xs h-6 px-2" onclick="applyBulkEdit('dept')">二级部门</button>
-                <button class="btn btn-secondary text-xs h-6 px-2" onclick="applyBulkEdit('bool')">可推全</button>
-            </div>
-
             <div class="flex justify-between items-center w-full">
                 <div class="text-secondary text-xs" id="selected-count">已选 0 项</div>
                 <div class="flex gap-2">
