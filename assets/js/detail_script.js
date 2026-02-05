@@ -57,14 +57,15 @@ function generateData(count = 30) {
             item[metric.id] = parseFloat(value);
             
             // 随机生成显著性状态
-            // 0: 不显著, 1: 显著 (90%), 2: 显著 (95%), 3: 显著 (99%)
-            const sigLevel = Math.floor(Math.random() * 4);
+            // 0: 不显著, 1: 10% (90%), 2: 5% (95%), 3: 3% (97%), 4: 1% (99%)
+            const sigLevel = Math.floor(Math.random() * 5);
             let sigValue;
             switch(sigLevel) {
                 case 0: sigValue = 'not_significant'; break;
-                case 1: sigValue = '90%'; break;
-                case 2: sigValue = '95%'; break;
-                case 3: sigValue = '99%'; break;
+                case 1: sigValue = '10%'; break; // 90% confidence
+                case 2: sigValue = '5%'; break;  // 95% confidence
+                case 3: sigValue = '3%'; break;  // 97% confidence
+                case 4: sigValue = '1%'; break;  // 99% confidence
             }
             item[metric.id + '_sig'] = sigValue;
         });
@@ -160,9 +161,10 @@ function renderFilters() {
                 select.style.width = '100%';
                 
                 const options = [
-                    { value: '99%', label: '显著 (99%)' },
-                    { value: '95%', label: '显著 (95%)' },
-                    { value: '90%', label: '显著 (90%)' },
+                    { value: '1%', label: '1% (99%)' },
+                    { value: '3%', label: '3% (97%)' },
+                    { value: '5%', label: '5% (95%)' },
+                    { value: '10%', label: '10% (90%)' },
                     { value: 'not_significant', label: '不显著' }
                 ];
 
@@ -360,12 +362,11 @@ function filterData(data) {
                     if (filter.value === 'not_significant') {
                         return itemSig === 'not_significant';
                     }
-                    // 如果选的是某个置信度(如95%)，则要看业务逻辑
-                    // 假设逻辑是：选90% -> 90%, 95%, 99% 都算
-                    // 选95% -> 95%, 99% 算
-                    // 选99% -> 只有 99% 算
-                    // 或者简单点：精确匹配。通常筛选是"至少显著达到XX"
-                    const sigLevels = ['not_significant', '90%', '95%', '99%'];
+                    // 如果选的是某个置信度(如5%)，则要看业务逻辑
+                    // 假设逻辑是：选10% -> 10%, 5%, 3%, 1% 都算 (p值越小越显著)
+                    // 选5% -> 5%, 3%, 1% 算
+                    // 选1% -> 只有 1% 算
+                    const sigLevels = ['not_significant', '10%', '5%', '3%', '1%'];
                     const itemLevelIndex = sigLevels.indexOf(itemSig);
                     const filterLevelIndex = sigLevels.indexOf(filter.value);
                     
