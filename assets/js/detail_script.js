@@ -57,15 +57,16 @@ function generateData(count = 30) {
             item[metric.id] = parseFloat(value);
             
             // 随机生成显著性状态
-            // 0: 不显著, 1: 10% (90%), 2: 5% (95%), 3: 3% (97%), 4: 1% (99%)
+            // 0: 不显著, 1: 10%, 2: 5%, 3: 3%, 4: 1%
+            // 注意：1% 代表最显著（置信度99%），10% 代表较不显著（置信度90%）
             const sigLevel = Math.floor(Math.random() * 5);
             let sigValue;
             switch(sigLevel) {
                 case 0: sigValue = 'not_significant'; break;
-                case 1: sigValue = '10%'; break; // 90% confidence
-                case 2: sigValue = '5%'; break;  // 95% confidence
-                case 3: sigValue = '3%'; break;  // 97% confidence
-                case 4: sigValue = '1%'; break;  // 99% confidence
+                case 1: sigValue = '10%'; break;
+                case 2: sigValue = '5%'; break;
+                case 3: sigValue = '3%'; break;
+                case 4: sigValue = '1%'; break;
             }
             item[metric.id + '_sig'] = sigValue;
         });
@@ -161,10 +162,10 @@ function renderFilters() {
                 select.style.width = '100%';
                 
                 const options = [
-                    { value: '1%', label: '1% (99%)' },
-                    { value: '3%', label: '3% (97%)' },
-                    { value: '5%', label: '5% (95%)' },
-                    { value: '10%', label: '10% (90%)' },
+                    { value: '1%', label: '1%' },
+                    { value: '3%', label: '3%' },
+                    { value: '5%', label: '5%' },
+                    { value: '10%', label: '10%' },
                     { value: 'not_significant', label: '不显著' }
                 ];
 
@@ -363,13 +364,15 @@ function filterData(data) {
                         return itemSig === 'not_significant';
                     }
                     // 如果选的是某个置信度(如5%)，则要看业务逻辑
-                    // 假设逻辑是：选10% -> 10%, 5%, 3%, 1% 都算 (p值越小越显著)
-                    // 选5% -> 5%, 3%, 1% 算
-                    // 选1% -> 只有 1% 算
+                    // 假设逻辑是：选10% -> 10%, 5%, 3%, 1% 都算 (p-value <= 0.1)
+                    // 选5% -> 5%, 3%, 1% 算 (p-value <= 0.05)
+                    // 选1% -> 只有 1% 算 (p-value <= 0.01)
+                    // 排序顺序：not_significant (最大) -> 10% -> 5% -> 3% -> 1% (最小/最显著)
                     const sigLevels = ['not_significant', '10%', '5%', '3%', '1%'];
                     const itemLevelIndex = sigLevels.indexOf(itemSig);
                     const filterLevelIndex = sigLevels.indexOf(filter.value);
                     
+                    // 越往右越显著，所以 item 的 index 应该 >= filter 的 index
                     return itemLevelIndex >= filterLevelIndex;
 
                 default: return true;
