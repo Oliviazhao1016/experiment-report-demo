@@ -55,6 +55,18 @@ function generateData(count = 30) {
                 }
             }
             item[metric.id] = parseFloat(value);
+            
+            // 随机生成显著性状态
+            // 0: 不显著, 1: 显著 (90%), 2: 显著 (95%), 3: 显著 (99%)
+            const sigLevel = Math.floor(Math.random() * 4);
+            let sigValue;
+            switch(sigLevel) {
+                case 0: sigValue = 'not_significant'; break;
+                case 1: sigValue = '90%'; break;
+                case 2: sigValue = '95%'; break;
+                case 3: sigValue = '99%'; break;
+            }
+            item[metric.id + '_sig'] = sigValue;
         });
         data.push(item);
     }
@@ -114,28 +126,95 @@ function renderFilters() {
         // 2. 运算符 Select
         const opSelect = document.createElement('select');
         opSelect.className = 'operator-select';
-        ['>', '=', '<'].forEach(op => {
+        
+        // 定义运算符选项
+        const operators = [
+            { value: '>', label: '>' },
+            { value: '=', label: '=' },
+            { value: '<', label: '<' },
+            { value: 'significance', label: '显著性' }
+        ];
+
+        operators.forEach(op => {
             const option = document.createElement('option');
-            option.value = op;
-            option.textContent = op;
+            option.value = op.value;
+            option.textContent = op.label;
             opSelect.appendChild(option);
         });
         opSelect.value = filter.operator;
+        
+        // 3. 值输入控件容器 (可能是 input 也可能是 select)
+        const valueContainer = document.createElement('div');
+        valueContainer.className = 'value-container';
+        // 保持和 input 类似的宽度
+        valueContainer.style.width = '120px'; 
+
+        // 辅助函数：根据 operator 渲染不同的值控件
+        const renderValueControl = () => {
+            valueContainer.innerHTML = ''; // 清空当前控件
+            
+            if (opSelect.value === 'significance') {
+                // 渲染下拉框
+                const select = document.createElement('select');
+                select.className = 'value-input'; // 复用样式
+                select.style.width = '100%';
+                
+                const options = [
+                    { value: '99%', label: '显著 (99%)' },
+                    { value: '95%', label: '显著 (95%)' },
+                    { value: '90%', label: '显著 (90%)' },
+                    { value: 'not_significant', label: '不显著' }
+                ];
+
+                // 添加默认空选项
+                const defaultOption = document.createElement('option');
+                defaultOption.value = '';
+                defaultOption.textContent = '请选择';
+                defaultOption.disabled = true;
+                if (!filter.value) defaultOption.selected = true;
+                select.appendChild(defaultOption);
+
+                options.forEach(opt => {
+                    const option = document.createElement('option');
+                    option.value = opt.value;
+                    option.textContent = opt.label;
+                    if (filter.value === opt.value) option.selected = true;
+                    select.appendChild(option);
+                });
+
+                select.addEventListener('change', (e) => {
+                    state.filters[index].value = e.target.value;
+                });
+                valueContainer.appendChild(select);
+
+            } else {
+                // 渲染数字输入框
+                const input = document.createElement('input');
+                input.type = 'number';
+                input.className = 'value-input';
+                input.placeholder = '输入值';
+                input.style.width = '100%';
+                input.value = filter.value;
+                input.addEventListener('input', (e) => {
+                    state.filters[index].value = e.target.value;
+                });
+                valueContainer.appendChild(input);
+            }
+        };
+
+        // 初始化渲染值控件
+        renderValueControl();
+
+        // 监听 operator 变化
         opSelect.addEventListener('change', (e) => {
-            state.filters[index].operator = e.target.value;
+            const newOperator = e.target.value;
+            state.filters[index].operator = newOperator;
+            // 切换 operator 时重置 value，避免类型不匹配
+            state.filters[index].value = ''; 
+            renderValueControl();
         });
 
-        // 3. 值 Input
-        const input = document.createElement('input');
-        input.type = 'number';
-        input.className = 'value-input';
-        input.placeholder = '输入值';
-        input.value = filter.value;
-        input.addEventListener('input', (e) => {
-            state.filters[index].value = e.target.value;
-        });
-
-        // 4. 删除按钮 (如果只有一行，是否允许删除？设计上通常保留至少一行或者允许清空。这里允许删除，为空时显示添加按钮)
+        // 4. 删除按钮
         const deleteBtn = document.createElement('button');
         deleteBtn.className = 'btn-icon btn-delete';
         deleteBtn.innerHTML = '×'; // 或者使用 SVG 图标
@@ -143,17 +222,12 @@ function renderFilters() {
         deleteBtn.addEventListener('click', () => {
             removeFilter(index);
         });
-
+        
         row.appendChild(metricSelect);
         row.appendChild(opSelect);
-        row.appendChild(input);
-        
-        // 只有当 filter 数量 > 1 时才显示删除按钮，或者始终显示
-        // 这里根据需求：最多3个。建议始终允许删除，但必须保留至少一个？
-        // 为了灵活性，允许删除所有，但如果是空的，就自动添加一个默认的，或者UI上处理。
-        // 这里策略：始终显示删除按钮。
+        row.appendChild(valueContainer);
         row.appendChild(deleteBtn);
-
+        
         container.appendChild(row);
     });
 
@@ -278,6 +352,25 @@ function filterData(data) {
                 case '>': return itemVal > filterVal;
                 case '=': return itemVal === filterVal;
                 case '<': return itemVal < filterVal;
+                case 'significance':
+                    // 获取该指标对应的显著性状态
+                    const sigKey = filter.metric + '_sig';
+                    const itemSig = item[sigKey];
+                    // 如果选的是"不显著"，直接匹配
+                    if (filter.value === 'not_significant') {
+                        return itemSig === 'not_significant';
+                    }
+                    // 如果选的是某个置信度(如95%)，则要看业务逻辑
+                    // 假设逻辑是：选90% -> 90%, 95%, 99% 都算
+                    // 选95% -> 95%, 99% 算
+                    // 选99% -> 只有 99% 算
+                    // 或者简单点：精确匹配。通常筛选是"至少显著达到XX"
+                    const sigLevels = ['not_significant', '90%', '95%', '99%'];
+                    const itemLevelIndex = sigLevels.indexOf(itemSig);
+                    const filterLevelIndex = sigLevels.indexOf(filter.value);
+                    
+                    return itemLevelIndex >= filterLevelIndex;
+
                 default: return true;
             }
         });
